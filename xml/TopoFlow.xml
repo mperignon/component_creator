@@ -1,0 +1,107 @@
+<dialog name="TopoFlow Hydrologic Model Driver">
+<!-- ====================================================================== -->
+  <tab name="Input Parameters">
+    <entry name="/TopoFlow/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>String</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>String</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>String</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>String</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>String</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/stop_method">
+      <label>Stopping method:</label>
+      <default>Q_peak_fraction</default>
+      <type>String</type>
+      <help_brief>stopping method {Q_peak_fraction; Until_model_time; Until_n_steps}</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/Qp_fraction">
+      <label>Q_peak fraction:</label>
+      <default>0.05</default>
+      <type>Float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>Value for Q_peak_fraction method</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/T_stop_model">
+      <label>Model stop time:</label>
+      <default>20.0</default>
+      <type>Float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e9</max>
+      </range>
+      <help_brief>Value for Until_model_time method [minutes]</help_brief>
+    </entry>
+
+    <entry name="/TopoFlow/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>100</default>
+      <type>Int</type>
+      <range>
+        <min>1</min>
+        <max>1000000000</max>
+      </range>
+      <help_brief>Value for Until_n_steps method</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/TopoFlow/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>TopoFlow</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/TopoFlow/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow</default>
+<!--  <default>http://csdms.colorado.edu/help/models/topoflow/TF_tutorial.htm</default> -->
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

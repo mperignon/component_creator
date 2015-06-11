@@ -1,0 +1,209 @@
+Input:
+- key: comp_status
+  name: Component status
+  description: Component status
+  value:
+    type: choice
+    default: Enabled
+    choices:
+    - Enabled
+    - Disabled
+    units: '-'
+- key: in_directory
+  name: Input directory
+  description: Input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+    units: '-'
+- key: out_directory
+  name: Output directory
+  description: Output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+    units: '-'
+- key: site_prefix
+  name: Site prefix
+  description: File prefix for the study site
+  value:
+    type: string
+    default: Treynor
+    units: '-'
+- key: case_prefix
+  name: Case prefix
+  description: File prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+    units: '-'
+- key: n_steps
+  name: Number of steps
+  description: Number of time steps
+  value:
+    type: long
+    default: '10'
+    range:
+      min: '1'
+      max: 1e7
+    units: '-'
+- key: dt
+  name: Time step
+  description: Evaporation process timestep
+  value:
+    type: float
+    default: '3600.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: K_soil_type
+  name: K_soil type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: K_soil
+  name: K_soil
+  description: Thermal conductivity of soil
+  value:
+    type: float
+    default: '0.450'
+    range:
+      min: '0.0'
+      max: 1e2
+    units: W/m/deg_C
+- key: soil_x_type
+  name: soil_x type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: soil_x
+  name: soil_x
+  description: Reference depth in soil
+  value:
+    type: float
+    default: '0.050'
+    range:
+      min: '0.0'
+      max: '10.0'
+    units: m
+- key: T_soil_x_type
+  name: T_soil_x type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: T_soil_x
+  name: T_soil_x
+  description: Temperature of soil at depth x
+  value:
+    type: float
+    default: '0.000'
+    range:
+      min: '-100.0'
+      max: '30.0'
+    units: degC
+Output:
+- key: save_grid_dt
+  name: Save grid timestep
+  description: Time interval between saved grids
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: SAVE_ER_GRIDS
+  name: Save er grids toggle
+  description: Option to save grids of evap. rate
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: mm/hr
+- key: er_gs_file
+  name: Save er grids file
+  description: Filename for grid stack of evap. rate
+  value:
+    type: string
+    default: '[case_prefix]_2D-ETrate.nc'
+    units: mm/hr
+- key: save_pixels_dt
+  name: Save pixels timestep
+  description: Time interval between time series values
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: pixel_file
+  name: Monitored pixel file
+  description: Filename for monitored pixel file
+  value:
+    type: string
+    default: '[case_prefix]_outlets.txt'
+    units: '-'
+- key: SAVE_ER_PIXELS
+  name: Save er pixels toggle
+  description: Option to save time series of evap. rate
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: er_ts_file
+  name: Save er pixels file
+  description: Filename for time series of evap. rate
+  value:
+    type: string
+    default: '[case_prefix]_0D-ETrate.txt'
+    units: mm/hr
+About:
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: EvapEnergyBalance
+    units: '-'
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+    units: '-'
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: Url for html help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Energy_Balance
+    units: '-'

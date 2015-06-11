@@ -1,0 +1,220 @@
+<dialog name="Evaporation: Priestley-Taylor Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/EvapPriestleyTaylor/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>long</type>
+      <range>
+        <min>1</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/dt">
+      <label>Time step:</label>
+      <default>3600.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>evaporation process timestep [sec]</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/alpha_type">
+      <label>alpha type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/alpha">
+      <label>alpha:</label>
+      <default>1.200</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>3.0</max>
+      </range>
+      <help_brief>coefficient [none]</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/K_soil_type">
+      <label>K_soil type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/K_soil">
+      <label>K_soil:</label>
+      <default>0.450</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>thermal conductivity of soil [W/m/deg_C]</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/soil_x_type">
+      <label>soil_x type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/soil_x">
+      <label>soil_x:</label>
+      <default>0.050</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>10.0</max>
+      </range>
+      <help_brief>reference depth in soil [m]</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/T_soil_x_type">
+      <label>T_soil_x type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/T_soil_x">
+      <label>T_soil_x:</label>
+      <default>0.000</default>
+      <type>float</type>
+      <range>
+        <min>-100.0</min>
+        <max>30.0</max>
+      </range>
+      <help_brief>temperature of soil at depth x [deg C]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output">
+    <entry name="/EvapPriestleyTaylor/Input/Var/save_grid_dt">
+      <label>Save grid timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved grids [sec]</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/SAVE_ER_GRIDS">
+      <label>Save er grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of evap. rate [mm/hr] {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/er_gs_file">
+      <label>Save er grids file:</label>
+      <default>[case_prefix]_2D-ETrate.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of evap. rate [mm/hr]</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/save_pixels_dt">
+      <label>Save pixels timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/SAVE_ER_PIXELS">
+      <label>Save er pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of evap. rate {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/Input/Var/er_ts_file">
+      <label>Save er pixels file:</label>
+      <default>[case_prefix]_0D-ETrate.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of evap. rate [mm/hr]</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/EvapPriestleyTaylor/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>EvapPriestleyTaylor</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/EvapPriestleyTaylor/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Priestley_Taylor</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

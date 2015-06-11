@@ -1,0 +1,306 @@
+<dialog name="Infiltration: Smith-Parlange Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/InfilSmithParlange/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>long</type>
+      <range>
+        <min>1</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/n_layers">
+      <label>Number of soil layers:</label>
+      <default>1</default>
+      <type>int</type>
+      <range>
+        <min>1</min>
+        <max>3</max>
+      </range>
+      <help_brief>number of soil layers</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/dt">
+      <label>Time step:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>timestep for infiltration process [sec]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 1">
+    <entry name="/InfilSmithParlange/Input/Var/Ks_type_0">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/Ks_0">
+      <label>K_sat:</label>
+      <default>0.00000720</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/Ki_type_0">
+      <label>K_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/Ki_0">
+      <label>K_init:</label>
+      <default>0.00000010</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>init. hydraulic conductivity [m/s] (&lt; K_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/qs_type_0">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/qs_0">
+      <label>theta_sat:</label>
+      <default>0.48500000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/qi_type_0">
+      <label>theta_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/qi_0">
+      <label>theta_init:</label>
+      <default>0.37580763</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>init. soil water content [none] (&lt; theta_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/G_type_0">
+      <label>G type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/G_0">
+      <label>G:</label>
+      <default>0.72400000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>capillary length scale [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/gam_type_0">
+      <label>gamma type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/gam_0">
+      <label>gamma:</label>
+      <default>0.82000000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>Smith-Parlange parameter [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/soil_type_0">
+      <label>Closest soil_type:</label>
+      <default>silty_loam</default>
+      <type>string</type>
+      <help_brief>closest standard soil type {sand; loamy_sand; sandy_loam; silty_loam; loam; sandy_clay_loam; silty_clay_loam; clay_loam; sandy_clay; silty_clay; clay}</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output">
+    <entry name="/InfilSmithParlange/Input/Var/save_grid_dt">
+      <label>Save grid timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved grids [sec]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/SAVE_V0_GRIDS">
+      <label>Save v0 grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of infil. rate (at surf)  {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/v0_gs_file">
+      <label>Save v0 grids file:</label>
+      <default>[case_prefix]_2D-v0.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of v0 [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/SAVE_I_GRIDS">
+      <label>Save I  grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of cumul. infil. depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/I_gs_file">
+      <label>Save I  grids file:</label>
+      <default>[case_prefix]_2D-I.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of I [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/save_pixels_dt">
+      <label>Save pixels timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/SAVE_V0_PIXELS">
+      <label>Save v0 pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of infil. rate (at surf) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/v0_ts_file">
+      <label>Save v0 pixels file:</label>
+      <default>[case_prefix]_0D-v0.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of v0 [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/SAVE_I_PIXELS">
+      <label>Save I  pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of cumul. infil. depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilSmithParlange/Input/Var/I_ts_file">
+      <label>Save I  pixels file:</label>
+      <default>[case_prefix]_0D-I.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of I [m]</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/InfilSmithParlange/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>InfilSmithParlange</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/InfilSmithParlange/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Smith-Parlange</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

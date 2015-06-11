@@ -1,0 +1,1128 @@
+Input:
+- key: comp_status
+  name: Component status
+  description: Component status
+  value:
+    type: choice
+    default: Enabled
+    choices:
+    - Enabled
+    - Disabled
+    units: '-'
+- key: in_directory
+  name: Input directory
+  description: Input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+    units: '-'
+- key: out_directory
+  name: Output directory
+  description: Output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+    units: '-'
+- key: site_prefix
+  name: Site prefix
+  description: File prefix for the study site
+  value:
+    type: string
+    default: Treynor
+    units: '-'
+- key: case_prefix
+  name: Case prefix
+  description: File prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+    units: '-'
+- key: n_steps
+  name: Number of steps
+  description: Number of time steps
+  value:
+    type: long
+    default: '10'
+    range:
+      min: '1'
+      max: 1e7
+    units: '-'
+- key: n_layers
+  name: Number of soil layers
+  description: Number of soil layers
+  value:
+    type: int
+    default: '3'
+    range:
+      min: '1'
+      max: '3'
+    units: '-'
+- key: dt
+  name: Time step
+  description: Timestep for infiltration process
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0'
+      max: 1e3
+    units: sec
+Layer 1:
+- key: Ks_type_0
+  name: K_sat type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: Ks_val_0
+  name: K_sat
+  description: Sat. hydraulic conductivity
+  value:
+    type: float
+    default: '7.20000010915e-06'
+    range:
+      min: '0.0'
+      max: 1e-2
+    units: m/s
+- key: Ki_type_0
+  name: K_init type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: Ki_val_0
+  name: K_init
+  description: Init. hydraulic conductivity (< k_sat)
+  value:
+    type: float
+    default: '9.84968936528e-08'
+    range:
+      min: '0.0'
+      max: 1e-2
+    units: m/s
+- key: qs_type_0
+  name: theta_sat type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qs_val_0
+  name: theta_sat
+  description: Sat. soil water content
+  value:
+    type: float
+    default: '0.48500000'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: qi_type_0
+  name: theta_init type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qi_val_0
+  name: theta_init
+  description: Init. soil water content (< theta_sat)
+  value:
+    type: float
+    default: '0.375807627781'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: qr_type_0
+  name: theta_r type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qr_val_0
+  name: theta_r
+  description: Residual soil water content (< theta_init)
+  value:
+    type: float
+    default: '0.0815254493977'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: pB_type_0
+  name: psi_B type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: pB_val_0
+  name: psi_B
+  description: Bubbling pressure head
+  value:
+    type: float
+    default: '-0.785999984741'
+    range:
+      min: -1e2
+      max: '0.0'
+    units: m
+- key: pA_type_0
+  name: psi_A type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: pA_val_0
+  name: psi_A
+  description: Pressure head offset parameter
+  value:
+    type: float
+    default: '0.0'
+    range:
+      min: -1e2
+      max: 1e2
+    units: m
+- key: lam_type_0
+  name: lambda type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: lam_val_0
+  name: lambda
+  description: Pore-size distribution parameter
+  value:
+    type: float
+    default: '0.188679238493'
+    range:
+      min: '0.0'
+      max: 1e2
+    units: '-'
+- key: c_type_0
+  name: c type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: c_val_0
+  name: c
+  description: Trans. brooks-corey curvature
+  value:
+    type: float
+    default: '1.0'
+    range:
+      min: '0.0'
+      max: 1e2
+    units: '-'
+- key: dz_val_0
+  name: dz
+  description: Vertical distance between nodes
+  value:
+    type: float
+    default: '0.03'
+    range:
+      min: 1e-3
+      max: '1.0'
+    units: m
+- key: nz_val_0
+  name: nz
+  description: Number of vertical nodes in layer
+  value:
+    type: int
+    default: '20'
+    range:
+      min: '0'
+      max: 1e3
+    units: '-'
+- key: soil_type_0
+  name: Closest soil_type
+  description: Closest standard soil type
+  value:
+    type: choice
+    default: silty_loam
+    choices:
+    - sand
+    - loamy_sand
+    - sandy_loam
+    - silty_loam
+    - loam
+    - sandy_clay_loam
+    - silty_clay_loam
+    - clay_loam
+    - sandy_clay
+    - silty_clay
+    - clay
+    units: '-'
+Layer 2:
+- key: Ks_type[1]
+  name: K_sat type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: Ks_val[1]
+  name: K_sat
+  description: Sat. hydraulic conductivity
+  value:
+    type: float
+    default: '6.94999995176e-06'
+    range:
+      min: '0.0'
+      max: 1e-2
+    units: m/s
+- key: Ki_type[1]
+  name: K_init type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: Ki_val[1]
+  name: K_init
+  description: Init. hydraulic conductivity (< k_sat)
+  value:
+    type: float
+    default: '3.29297097399e-08'
+    range:
+      min: '0.0'
+      max: 1e-2
+    units: m/s
+- key: qs_type[1]
+  name: theta_sat type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qs_val[1]
+  name: theta_sat
+  description: Sat. soil water content
+  value:
+    type: float
+    default: '0.45100000'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: qi_type[1]
+  name: theta_init type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qi_val[1]
+  name: theta_init
+  description: Init. soil water content (< theta_sat)
+  value:
+    type: float
+    default: '0.328764135306'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: qr_type[1]
+  name: theta_r type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qr_val[1]
+  name: theta_r
+  description: Residual soil water content (< theta_init)
+  value:
+    type: float
+    default: '0.071217406467'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: pB_type[1]
+  name: psi_B type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: pB_val[1]
+  name: psi_B
+  description: Bubbling pressure head
+  value:
+    type: float
+    default: '-0.477999992371'
+    range:
+      min: -1e2
+      max: '0.0'
+    units: m
+- key: pA_type[1]
+  name: psi_A type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: pA_val[1]
+  name: psi_A
+  description: Pressure head offset parameter
+  value:
+    type: float
+    default: '0.0'
+    range:
+      min: -1e2
+      max: 1e2
+    units: m
+- key: lam_type[1]
+  name: lambda type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: lam_val[1]
+  name: lambda
+  description: Pore-size distribution parameter
+  value:
+    type: float
+    default: '0.185528761553'
+    range:
+      min: '0.0'
+      max: 1e2
+    units: '-'
+- key: c_type[1]
+  name: c type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: c_val[1]
+  name: c
+  description: Trans. brooks-corey curvature
+  value:
+    type: float
+    default: '1.0'
+    range:
+      min: '0.0'
+      max: 1e2
+    units: '-'
+- key: dz_val[1]
+  name: dz
+  description: Vertical distance between nodes
+  value:
+    type: float
+    default: '0.03'
+    range:
+      min: 1e-3
+      max: '1.0'
+    units: m
+- key: nz_val[1]
+  name: nz
+  description: Number of vertical nodes in layer
+  value:
+    type: int
+    default: '20'
+    range:
+      min: '0'
+      max: 1e3
+    units: '-'
+- key: soil_type[1]
+  name: Closest soil_type
+  description: Closest standard soil type
+  value:
+    type: choice
+    default: loam
+    choices:
+    - sand
+    - loamy_sand
+    - sandy_loam
+    - silty_loam
+    - loam
+    - sandy_clay_loam
+    - silty_clay_loam
+    - clay_loam
+    - sandy_clay
+    - silty_clay
+    - clay
+    units: '-'
+Layer 3:
+- key: Ks_type[2]
+  name: K_sat type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: Ks_val[2]
+  name: K_sat
+  description: Sat. hydraulic conductivity
+  value:
+    type: float
+    default: '2.45000002906e-06'
+    range:
+      min: '0.0'
+      max: 1e-2
+    units: m/s
+- key: Ki_type[2]
+  name: K_init type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: Ki_val[2]
+  name: K_init
+  description: Init. hydraulic conductivity (< k_sat)
+  value:
+    type: float
+    default: '3.11491927151e-08'
+    range:
+      min: '0.0'
+      max: 1e-2
+    units: m/s
+- key: qs_type[2]
+  name: theta_sat type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qs_val[2]
+  name: theta_sat
+  description: Sat. soil water content
+  value:
+    type: float
+    default: '0.47600000'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: qi_type[2]
+  name: theta_init type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qi_val[2]
+  name: theta_init
+  description: Init. soil water content (< theta_sat)
+  value:
+    type: float
+    default: '0.412771789613'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: qr_type[2]
+  name: theta_r type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: qr_val[2]
+  name: theta_r
+  description: Residual soil water content (< theta_init)
+  value:
+    type: float
+    default: '0.15295787535'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: pB_type[2]
+  name: psi_B type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: pB_val[2]
+  name: psi_B
+  description: Bubbling pressure head
+  value:
+    type: float
+    default: '-0.6300'
+    range:
+      min: -1e2
+      max: '0.0'
+    units: m
+- key: pA_type[2]
+  name: psi_A type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: pA_val[2]
+  name: psi_A
+  description: Pressure head offset parameter
+  value:
+    type: float
+    default: '0.0'
+    range:
+      min: -1e2
+      max: 1e2
+    units: m
+- key: lam_type[2]
+  name: lambda type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: lam_val[2]
+  name: lambda
+  description: Pore-size distribution parameter
+  value:
+    type: float
+    default: '0.117370885713'
+    range:
+      min: '0.0'
+      max: 1e2
+    units: '-'
+- key: c_type[2]
+  name: c type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: c_val[2]
+  name: c
+  description: Trans. brooks-corey curvature
+  value:
+    type: float
+    default: '1.0'
+    range:
+      min: '0.0'
+      max: 1e2
+    units: '-'
+- key: dz_val[2]
+  name: dz
+  description: Vertical distance between nodes
+  value:
+    type: float
+    default: '0.03'
+    range:
+      min: 1e-3
+      max: '1.0'
+    units: m
+- key: nz_val[2]
+  name: nz
+  description: Number of vertical nodes in layer
+  value:
+    type: int
+    default: '20'
+    range:
+      min: '0'
+      max: 1e3
+    units: '-'
+- key: soil_type[2]
+  name: Closest soil_type
+  description: Closest standard soil type
+  value:
+    type: choice
+    default: clay_loam
+    choices:
+    - sand
+    - loamy_sand
+    - sandy_loam
+    - silty_loam
+    - loam
+    - sandy_clay_loam
+    - silty_clay_loam
+    - clay_loam
+    - sandy_clay
+    - silty_clay
+    - clay
+    units: '-'
+Output 1:
+- key: save_grid_dt
+  name: Save grid timestep
+  description: Time interval between saved grids
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: SAVE_V0_GRIDS
+  name: Save v0 grids toggle
+  description: Option to save grids of infil. rate (at surf)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: v0_gs_file
+  name: Save v0 grids file
+  description: Filename for grid stack of v0
+  value:
+    type: string
+    default: '[case_prefix]_2D-v0.nc'
+    units: m/s
+- key: SAVE_I_GRIDS
+  name: Save I  grids toggle
+  description: Option to save grids of cumul. infil. depth
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: I_gs_file
+  name: Save I  grids file
+  description: Filename for grid stack of i
+  value:
+    type: string
+    default: '[case_prefix]_2D-I.nc'
+    units: m
+- key: SAVE_Q0_GRIDS
+  name: Save q0 grids toggle
+  description: Option to save grids of soil water content (at surf)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: q0_gs_file
+  name: Save q0 grids file
+  description: Filename for grid stack of q0
+  value:
+    type: string
+    default: '[case_prefix]_2D-q0.nc'
+    units: '-'
+- key: SAVE_ZW_GRIDS
+  name: Save Zw grids toggle
+  description: Option to save grids of depth to wetting front
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: Zw_gs_file
+  name: Save Zw grids file
+  description: Filename for grid stack of zw
+  value:
+    type: string
+    default: '[case_prefix]_2D-Zw.nc'
+    units: m
+Output 2:
+- key: save_pixels_dt
+  name: Save pixels timestep
+  description: Time interval between time series values
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: pixel_file
+  name: Monitored pixel file
+  description: Filename for monitored pixel file
+  value:
+    type: string
+    default: '[case_prefix]_outlets.txt'
+    units: '-'
+- key: SAVE_V0_PIXELS
+  name: Save v0 pixels toggle
+  description: Option to save time series of infil. rate (at surf)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: v0_ts_file
+  name: Save v0 pixels file
+  description: Filename for time series of v0
+  value:
+    type: string
+    default: '[case_prefix]_0D-v0.txt'
+    units: m/s
+- key: SAVE_I_PIXELS
+  name: Save I  pixels toggle
+  description: Option to save time series of cumul. infil. depth
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: I_ts_file
+  name: Save I  pixels file
+  description: Filename for time series of i
+  value:
+    type: string
+    default: '[case_prefix]_0D-I.txt'
+    units: m
+- key: SAVE_Q0_PIXELS
+  name: Save q0 pixels toggle
+  description: Option to save time series of soil water content (at surf)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: q0_ts_file
+  name: Save q0 pixels file
+  description: Filename for time series of q0
+  value:
+    type: string
+    default: '[case_prefix]_0D-q0.txt'
+    units: '-'
+- key: SAVE_ZW_PIXELS
+  name: Save Zw pixels toggle
+  description: Option to save time series of depth to wetting front
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: Zw_ts_file
+  name: Save Zw pixels file
+  description: Filename for time series of zw
+  value:
+    type: string
+    default: '[case_prefix]_0D-Zw.txt'
+    units: m
+Output 3:
+- key: save_profile_dt
+  name: Save profile timestep
+  description: Time interval between saved 1d profiles
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: SAVE_Q_PROFILES
+  name: Save q profiles toggle
+  description: Option to save 1d profile of soil water content
+  value:
+    type: choice
+    default: 'Yes'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: q_ps_file
+  name: Save q profiles file
+  description: Filename for 1d profile of theta
+  value:
+    type: string
+    default: '[case_prefix]_1D-q.nc'
+    units: '-'
+- key: SAVE_P_PROFILES
+  name: Save p profiles toggle
+  description: Option to save 1d profile of pressure head
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: p_ps_file
+  name: Save p profiles file
+  description: Filename for 1d profile of psi
+  value:
+    type: string
+    default: '[case_prefix]_1D_p.nc'
+    units: m
+- key: SAVE_K_PROFILES
+  name: Save K profiles toggle
+  description: Option to save 1d profile of hydr. conductivity
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: K_ps_file
+  name: Save K profiles file
+  description: Filename for 1d profile of k
+  value:
+    type: string
+    default: '[case_prefix]_1D_K.nc'
+    units: m/s
+- key: SAVE_V_PROFILES
+  name: Save v profiles toggle
+  description: Option to save 1d profile of vert. flow rate
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: v_ps_file
+  name: Save v profiles file
+  description: Filename for 1d profile of v
+  value:
+    type: string
+    default: '[case_prefix]_1D_v.nc'
+    units: m/s
+Output 4:
+- key: save_cube_dt
+  name: Save cube timestep
+  description: Time interval between saved 3d cubes
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: SAVE_Q_CUBES
+  name: Save q cubes toggle
+  description: Option to save 3d cubes of soil water content
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: q_cs_file
+  name: Save q cubes file
+  description: Filename for 3d cubes of theta
+  value:
+    type: string
+    default: '[case_prefix]_3D-q.nc'
+    units: '-'
+- key: SAVE_P_CUBES
+  name: Save p cubes toggle
+  description: Option to save 3d cubes of pressure head
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: p_cs_file
+  name: Save p cubes file
+  description: Filename for 3d cubes of psi
+  value:
+    type: string
+    default: '[case_prefix]_3D-p.nc'
+    units: m
+- key: SAVE_K_CUBES
+  name: Save K cubes toggle
+  description: Option to save 3d cubes of hydr. conductivity
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: K_cs_file
+  name: Save K cubes file
+  description: Filename for 3d cubes of k
+  value:
+    type: string
+    default: '[case_prefix]_3D-K.nc'
+    units: m/s
+- key: SAVE_V_CUBES
+  name: Save v cubes toggle
+  description: Option to save 3d cubes of vert. flow rate
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: v_cs_file
+  name: Save v cubes file
+  description: Filename for 3d cubes of v
+  value:
+    type: string
+    default: '[case_prefix]_3D-v.nc'
+    units: m/s
+About:
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: InfilRichards1D
+    units: '-'
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+    units: '-'
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: Url for html help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Richards_1D
+    units: '-'

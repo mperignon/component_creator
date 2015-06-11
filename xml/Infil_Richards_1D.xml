@@ -1,0 +1,974 @@
+<dialog name="Infiltration: Richards 1D Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/InfilRichards1D/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>long</type>
+      <range>
+        <min>1</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/n_layers">
+      <label>Number of soil layers:</label>
+      <default>3</default>
+      <type>int</type>
+      <range>
+        <min>1</min>
+        <max>3</max>
+      </range>
+      <help_brief>number of soil layers</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/dt">
+      <label>Time step:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>timestep for infiltration process [sec]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 1">
+    <entry name="/InfilRichards1D/Input/Var/Ks_type_0">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ks_val_0">
+      <label>K_sat:</label>
+      <default>7.20000010915e-06</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ki_type_0">
+      <label>K_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ki_val_0">
+      <label>K_init:</label>
+      <default>9.84968936528e-08</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>init. hydraulic conductivity [m/s] (&lt; K_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qs_type_0">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qs_val_0">
+      <label>theta_sat:</label>
+      <default>0.48500000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qi_type_0">
+      <label>theta_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qi_val_0">
+      <label>theta_init:</label>
+      <default>0.375807627781</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>init. soil water content [none] (&lt; theta_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qr_type_0">
+      <label>theta_r type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qr_val_0">
+      <label>theta_r:</label>
+      <default>0.0815254493977</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>residual soil water content [none] (&lt; theta_init)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pB_type_0">
+      <label>psi_B type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pB_val_0">
+      <label>psi_B:</label>
+      <default>-0.785999984741</default>
+      <type>float</type>
+      <range>
+        <min>-1e2</min>
+        <max>0.0</max>
+      </range>
+      <help_brief>bubbling pressure head [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pA_type_0">
+      <label>psi_A type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pA_val_0">
+      <label>psi_A:</label>
+      <default>0.0</default>
+      <type>float</type>
+      <range>
+        <min>-1e2</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>pressure head offset parameter [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/lam_type_0">
+      <label>lambda type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/lam_val_0">
+      <label>lambda:</label>
+      <default>0.188679238493</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>pore-size distribution parameter [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/c_type_0">
+      <label>c type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/c_val_0">
+      <label>c:</label>
+      <default>1.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>trans. Brooks-Corey curvature [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/dz_val_0">
+      <label>dz:</label>
+      <default>0.03</default>
+      <type>float</type>
+      <range>
+        <min>1e-3</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>vertical distance between nodes [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/nz_val_0">
+      <label>nz:</label>
+      <default>20</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>number of vertical nodes in layer [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/soil_type_0">
+      <label>Closest soil_type:</label>
+      <default>silty_loam</default>
+      <type>string</type>
+      <help_brief>closest standard soil type {sand; loamy_sand; sandy_loam; silty_loam; loam; sandy_clay_loam; silty_clay_loam; clay_loam; sandy_clay; silty_clay; clay}</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 2">
+    <entry name="/InfilRichards1D/Input/Var/Ks_type[1]">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ks_val[1]">
+      <label>K_sat:</label>
+      <default>6.94999995176e-06</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ki_type[1]">
+      <label>K_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ki_val[1]">
+      <label>K_init:</label>
+      <default>3.29297097399e-08</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>init. hydraulic conductivity [m/s] (&lt; K_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qs_type[1]">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qs_val[1]">
+      <label>theta_sat:</label>
+      <default>0.45100000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qi_type[1]">
+      <label>theta_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qi_val[1]">
+      <label>theta_init:</label>
+      <default>0.328764135306</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>init. soil water content [none] (&lt; theta_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qr_type[1]">
+      <label>theta_r type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qr_val[1]">
+      <label>theta_r:</label>
+      <default>0.071217406467</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>residual soil water content [none] (&lt; theta_init)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pB_type[1]">
+      <label>psi_B type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pB_val[1]">
+      <label>psi_B:</label>
+      <default>-0.477999992371</default>
+      <type>float</type>
+      <range>
+        <min>-1e2</min>
+        <max>0.0</max>
+      </range>
+      <help_brief>bubbling pressure head [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pA_type[1]">
+      <label>psi_A type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pA_val[1]">
+      <label>psi_A:</label>
+      <default>0.0</default>
+      <type>float</type>
+      <range>
+        <min>-1e2</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>pressure head offset parameter [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/lam_type[1]">
+      <label>lambda type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/lam_val[1]">
+      <label>lambda:</label>
+      <default>0.185528761553</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>pore-size distribution parameter [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/c_type[1]">
+      <label>c type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/c_val[1]">
+      <label>c:</label>
+      <default>1.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>trans. Brooks-Corey curvature [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/dz_val[1]">
+      <label>dz:</label>
+      <default>0.03</default>
+      <type>float</type>
+      <range>
+        <min>1e-3</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>vertical distance between nodes [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/nz_val[1]">
+      <label>nz:</label>
+      <default>20</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>number of vertical nodes in layer [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/soil_type[1]">
+      <label>Closest soil_type:</label>
+      <default>loam</default>
+      <type>string</type>
+      <help_brief>closest standard soil type {sand; loamy_sand; sandy_loam; silty_loam; loam; sandy_clay_loam; silty_clay_loam; clay_loam; sandy_clay; silty_clay; clay}</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 3">
+    <entry name="/InfilRichards1D/Input/Var/Ks_type[2]">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ks_val[2]">
+      <label>K_sat:</label>
+      <default>2.45000002906e-06</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ki_type[2]">
+      <label>K_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Ki_val[2]">
+      <label>K_init:</label>
+      <default>3.11491927151e-08</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>init. hydraulic conductivity [m/s] (&lt; K_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qs_type[2]">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qs_val[2]">
+      <label>theta_sat:</label>
+      <default>0.47600000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qi_type[2]">
+      <label>theta_init type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qi_val[2]">
+      <label>theta_init:</label>
+      <default>0.412771789613</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>init. soil water content [none] (&lt; theta_sat)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qr_type[2]">
+      <label>theta_r type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/qr_val[2]">
+      <label>theta_r:</label>
+      <default>0.15295787535</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>residual soil water content [none] (&lt; theta_init)</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pB_type[2]">
+      <label>psi_B type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pB_val[2]">
+      <label>psi_B:</label>
+      <default>-0.6300</default>
+      <type>float</type>
+      <range>
+        <min>-1e2</min>
+        <max>0.0</max>
+      </range>
+      <help_brief>bubbling pressure head [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pA_type[2]">
+      <label>psi_A type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pA_val[2]">
+      <label>psi_A:</label>
+      <default>0.0</default>
+      <type>float</type>
+      <range>
+        <min>-1e2</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>pressure head offset parameter [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/lam_type[2]">
+      <label>lambda type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/lam_val[2]">
+      <label>lambda:</label>
+      <default>0.117370885713</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>pore-size distribution parameter [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/c_type[2]">
+      <label>c type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/c_val[2]">
+      <label>c:</label>
+      <default>1.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>trans. Brooks-Corey curvature [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/dz_val[2]">
+      <label>dz:</label>
+      <default>0.03</default>
+      <type>float</type>
+      <range>
+        <min>1e-3</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>vertical distance between nodes [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/nz_val[2]">
+      <label>nz:</label>
+      <default>20</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>number of vertical nodes in layer [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/soil_type[2]">
+      <label>Closest soil_type:</label>
+      <default>clay_loam</default>
+      <type>string</type>
+      <help_brief>closest standard soil type {sand; loamy_sand; sandy_loam; silty_loam; loam; sandy_clay_loam; silty_clay_loam; clay_loam; sandy_clay; silty_clay; clay}</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 1">
+    <entry name="/InfilRichards1D/Input/Var/save_grid_dt">
+      <label>Save grid timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved grids [sec]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_V0_GRIDS">
+      <label>Save v0 grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of infil. rate (at surf) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/v0_gs_file">
+      <label>Save v0 grids file:</label>
+      <default>[case_prefix]_2D-v0.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of v0 [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_I_GRIDS">
+      <label>Save I  grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of cumul. infil. depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/I_gs_file">
+      <label>Save I  grids file:</label>
+      <default>[case_prefix]_2D-I.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of I [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_Q0_GRIDS">
+      <label>Save q0 grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of soil water content (at surf) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/q0_gs_file">
+      <label>Save q0 grids file:</label>
+      <default>[case_prefix]_2D-q0.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of q0 [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_ZW_GRIDS">
+      <label>Save Zw grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of depth to wetting front {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Zw_gs_file">
+      <label>Save Zw grids file:</label>
+      <default>[case_prefix]_2D-Zw.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of Zw [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 2">
+    <entry name="/InfilRichards1D/Input/Var/save_pixels_dt">
+      <label>Save pixels timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_V0_PIXELS">
+      <label>Save v0 pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of infil. rate (at surf) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/v0_ts_file">
+      <label>Save v0 pixels file:</label>
+      <default>[case_prefix]_0D-v0.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of v0 [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_I_PIXELS">
+      <label>Save I  pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of cumul. infil. depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/I_ts_file">
+      <label>Save I  pixels file:</label>
+      <default>[case_prefix]_0D-I.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of I [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_Q0_PIXELS">
+      <label>Save q0 pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of soil water content (at surf) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/q0_ts_file">
+      <label>Save q0 pixels file:</label>
+      <default>[case_prefix]_0D-q0.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of q0 [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_ZW_PIXELS">
+      <label>Save Zw pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of depth to wetting front {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/Zw_ts_file">
+      <label>Save Zw pixels file:</label>
+      <default>[case_prefix]_0D-Zw.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of Zw [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 3">
+    <entry name="/InfilRichards1D/Input/Var/save_profile_dt">
+      <label>Save profile timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved 1D profiles [sec]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_Q_PROFILES">
+      <label>Save q profiles toggle:</label>
+      <default>Yes</default>
+      <type>string</type>
+      <help_brief>option to save 1D profile of soil water content {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/q_ps_file">
+      <label>Save q profiles file:</label>
+      <default>[case_prefix]_1D-q.nc</default>
+      <type>string</type>
+      <help_brief>filename for 1D profile of theta [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_P_PROFILES">
+      <label>Save p profiles toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save 1D profile of pressure head {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/p_ps_file">
+      <label>Save p profiles file:</label>
+      <default>[case_prefix]_1D_p.nc</default>
+      <type>string</type>
+      <help_brief>filename for 1D profile of psi [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_K_PROFILES">
+      <label>Save K profiles toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save 1D profile of hydr. conductivity {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/K_ps_file">
+      <label>Save K profiles file:</label>
+      <default>[case_prefix]_1D_K.nc</default>
+      <type>string</type>
+      <help_brief>filename for 1D profile of K [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_V_PROFILES">
+      <label>Save v profiles toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save 1D profile of vert. flow rate {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/v_ps_file">
+      <label>Save v profiles file:</label>
+      <default>[case_prefix]_1D_v.nc</default>
+      <type>string</type>
+      <help_brief>filename for 1D profile of v [m/s]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 4">
+    <entry name="/InfilRichards1D/Input/Var/save_cube_dt">
+      <label>Save cube timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved 3D cubes [sec]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_Q_CUBES">
+      <label>Save q cubes toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save 3D cubes of soil water content {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/q_cs_file">
+      <label>Save q cubes file:</label>
+      <default>[case_prefix]_3D-q.nc</default>
+      <type>string</type>
+      <help_brief>filename for 3D cubes of theta [none]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_P_CUBES">
+      <label>Save p cubes toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save 3D cubes of pressure head {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/p_cs_file">
+      <label>Save p cubes file:</label>
+      <default>[case_prefix]_3D-p.nc</default>
+      <type>string</type>
+      <help_brief>filename for 3D cubes of psi [m]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_K_CUBES">
+      <label>Save K cubes toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save 3D cubes of hydr. conductivity {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/K_cs_file">
+      <label>Save K cubes file:</label>
+      <default>[case_prefix]_3D-K.nc</default>
+      <type>string</type>
+      <help_brief>filename for 3D cubes of K [m/s]</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/SAVE_V_CUBES">
+      <label>Save v cubes toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save 3D cubes of vert. flow rate {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/InfilRichards1D/Input/Var/v_cs_file">
+      <label>Save v cubes file:</label>
+      <default>[case_prefix]_3D-v.nc</default>
+      <type>string</type>
+      <help_brief>filename for 3D cubes of v [m/s]</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/InfilRichards1D/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>InfilRichards1D</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/InfilRichards1D/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Richards_1D</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

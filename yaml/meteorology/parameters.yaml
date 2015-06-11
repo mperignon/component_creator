@@ -1,0 +1,728 @@
+Input 1:
+- key: comp_status
+  name: Component status
+  description: Component status
+  value:
+    type: choice
+    default: Enabled
+    choices:
+    - Enabled
+    - Disabled
+    units: '-'
+- key: in_directory
+  name: Input directory
+  description: Input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+    units: '-'
+- key: out_directory
+  name: Output directory
+  description: Output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+    units: '-'
+- key: site_prefix
+  name: Site prefix
+  description: File prefix for the study site
+  value:
+    type: string
+    default: Treynor
+    units: '-'
+- key: case_prefix
+  name: Case prefix
+  description: File prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+    units: '-'
+- key: n_steps
+  name: Number of steps
+  description: Number of time steps
+  value:
+    type: long
+    default: '10'
+    range:
+      min: '1'
+      max: 1e7
+    units: '-'
+- key: dt
+  name: Time step
+  description: Meteorology time step
+  value:
+    type: float
+    default: '60.0'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: rho_H2O_type
+  name: rho_H2O type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: rho_H2O
+  name: rho_H2O
+  description: Density of water
+  value:
+    type: float
+    default: '1000.000'
+    range:
+      min: '0.0'
+      max: '2000.0'
+    units: kg/m^3
+- key: Cp_air_type
+  name: Cp_air type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: Cp_air
+  name: Cp_air
+  description: Heat capacity of air
+  value:
+    type: float
+    default: '1005.7000'
+    range:
+      min: '0.0'
+      max: '2000.0'
+    units: J/kg/K
+- key: rho_air_type
+  name: rho_air type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: rho_air
+  name: rho_air
+  description: Density of air
+  value:
+    type: float
+    default: '1.26139998'
+    range:
+      min: '0.0'
+      max: '2.0'
+    units: kg/m^3
+- key: P_type
+  name: precip. rates type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Time_Series
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: P
+  name: precip. rates
+  description: Precipitation rate
+  value:
+    type: string
+    default: '[case_prefix]_rain_rates.txt'
+    units: mm/hr
+- key: PRECIP_ONLY
+  name: PRECIP_ONLY toggle
+  description: Toggle to turn off all variable updates except precip.
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+Input 2:
+- key: T_air_type
+  name: T_air type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: T_air
+  name: T_air
+  description: Temperature of air
+  value:
+    type: float
+    default: '20.000'
+    range:
+      min: '-100.0'
+      max: '150.0'
+    units: degC
+- key: T_surf_type
+  name: T_surf type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: T_surf
+  name: T_surf
+  description: Temperature of surface
+  value:
+    type: float
+    default: '-5.000'
+    range:
+      min: '-100.0'
+      max: '150.0'
+    units: degC
+- key: RH_type
+  name: RH type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: RH
+  name: RH
+  description: Relative humidity
+  value:
+    type: float
+    default: '0.500'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: p0_type
+  name: p0 type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: p0
+  name: p0
+  description: Atmospheric pressure
+  value:
+    type: float
+    default: '1000.000'
+    range:
+      min: '700.0'
+      max: '1500.0'
+    units: mbar
+- key: uz_type
+  name: uz type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: uz
+  name: uz
+  description: Wind velocity at height z
+  value:
+    type: float
+    default: '3.000'
+    range:
+      min: '0.0'
+      max: '20.0'
+    units: m/s
+- key: z_type
+  name: z type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: z
+  name: z
+  description: Wind reference height
+  value:
+    type: float
+    default: '10.000'
+    range:
+      min: '0.0'
+      max: 1e3
+    units: m
+- key: z0_air_type
+  name: z0_air type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: z0_air
+  name: z0_air
+  description: Surface roughness length scale for wind
+  value:
+    type: float
+    default: '0.0200'
+    range:
+      min: 1e-4
+      max: 1e2
+    units: m
+Input 3:
+- key: albedo_type
+  name: albedo type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: albedo
+  name: albedo
+  description: Surface albedo in
+  value:
+    type: float
+    default: '0.8'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: unitless
+- key: em_surf_type
+  name: emissivity type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: em_surf
+  name: emissivity
+  description: Surface emissivity in
+  value:
+    type: float
+    default: '0.98'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: unitless
+- key: dust_atten_type
+  name: dust atten. type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: dust_atten
+  name: dust attenuation
+  description: Dust attenuation factor in
+  value:
+    type: float
+    default: '0.08'
+    range:
+      min: '0.0'
+      max: '0.3'
+    units: unitless
+- key: cloud_factor_type
+  name: cloud factor type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: cloud_factor
+  name: cloud factor
+  description: Cloudiness factor, c, in
+  value:
+    type: float
+    default: '0.0'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: unitless
+- key: canopy_factor_type
+  name: canopy factor type
+  description: Allowed input types
+  value:
+    type: choice
+    default: Scalar
+    choices:
+    - Scalar
+    - Grid
+    - Time_Series
+    - Grid_Sequence
+    units: '-'
+- key: canopy_factor
+  name: canopy factor
+  description: Canopy coverage factor, f, in
+  value:
+    type: float
+    default: '0.0'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: unitless
+- key: slope_grid_file
+  name: slope grid file
+  description: Flat binary, row-major file with grid of 4-byte slopes
+  value:
+    type: string
+    default: '[site_prefix]_slope.bin'
+    units: '-'
+- key: aspect_grid_file
+  name: aspect grid file
+  description: Flat binary, row-major file with grid of 4-byte aspects
+  value:
+    type: string
+    default: '[site_prefix]_aspect.bin'
+    units: '-'
+- key: GMT_offset
+  name: time zone offset
+  description: Time zone offset from gmt
+  value:
+    type: choice
+    default: '0'
+    choices:
+    - '-12'
+    - '-11'
+    - '-10'
+    - '-9'
+    - '-8'
+    - '-7'
+    - '-6'
+    - '-5'
+    - '-4'
+    - '-3'
+    - '-2'
+    - '-1'
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    - '11'
+    - '12'
+    units: '-'
+- key: start_month
+  name: start month
+  description: Start month
+  value:
+    type: choice
+    default: January
+    choices:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    units: '-'
+- key: start_day
+  name: start_day
+  description: Start day
+  value:
+    type: int
+    default: '1'
+    range:
+      min: '0'
+      max: '31'
+    units: '-'
+- key: start_hour
+  name: start_hour
+  description: Start hour
+  value:
+    type: float
+    default: '0.0'
+    range:
+      min: '0.0'
+      max: '23.99'
+    units: '-'
+Output 1:
+- key: save_grid_dt
+  name: Save grid timestep
+  description: Time interval between saved grids
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: SAVE_EA_GRIDS
+  name: Save e_air grids toggle
+  description: Option to save grids of vapor pressure (in air)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: ea_gs_file
+  name: Save e_air grids toggle
+  description: Filename for grid stack of vapor pressure (air)
+  value:
+    type: string
+    default: '[case_prefix]_2D-eair.nc'
+    units: mbar
+- key: SAVE_ES_GRIDS
+  name: Save e_surf grids toggle
+  description: Option to save grids of vapor pressure (at surf)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: es_gs_file
+  name: Save e_surf grids file
+  description: Filename for grid stack of vapor pressure (surf)
+  value:
+    type: string
+    default: '[case_prefix]_2D-esurf.nc'
+    units: mbar
+- key: SAVE_QSW_GRIDS
+  name: Save Qn_SW grids toggle
+  description: Option to save grids of net shortwave radiation
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: Qsw_gs_file
+  name: Save Qn_SW grids file
+  description: Filename for grid stack of net shortwave radiation
+  value:
+    type: string
+    default: '[case_prefix]_2D-QnSW.nc'
+    units: W/m^2
+- key: SAVE_QLW_GRIDS
+  name: Save Qn_LW grids toggle
+  description: Option to save grids of net longwave radiation
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: Qlw_gs_file
+  name: Save Qn_LW grids file
+  description: Filename for grid stack of net longwave radiation
+  value:
+    type: string
+    default: '[case_prefix]_2D-QnLW.nc'
+    units: W/m^2
+- key: SAVE_EMA_GRIDS
+  name: Save em_air grids toggle
+  description: Option to save grids of air emissivity
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: ema_gs_file
+  name: Save em_air grids file
+  description: Filename for grid stack of air emissivity in
+  value:
+    type: string
+    default: '[case_prefix]_2D-emair.nc'
+    units: unitless
+Output 2:
+- key: save_pixels_dt
+  name: Save pixels timestep
+  description: Time interval between time series values
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+    units: sec
+- key: pixel_file
+  name: Monitored pixel file
+  description: Filename for monitored pixel file
+  value:
+    type: string
+    default: '[case_prefix]_outlets.txt'
+    units: '-'
+- key: SAVE_EA_PIXELS
+  name: Save e_air pixels toggle
+  description: Option to save time series of sat. vapor press. (in air)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: ea_ts_file
+  name: Save e_air pixels file
+  description: Filename for time series of sat. vapor press. (in air)
+  value:
+    type: string
+    default: '[case_prefix]_0D-eair.nc'
+    units: mbar
+- key: SAVE_ES_PIXELS
+  name: Save e_surf pixels toggle
+  description: Option to save time series of sat. vapor press. (at surf)
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: es_ts_file
+  name: Save e_surf pixels file
+  description: Filename for time series of sat. vapor press. (at surf)
+  value:
+    type: string
+    default: '[case_prefix]_0D-esurf.nc'
+    units: mbar
+- key: SAVE_QSW_PIXELS
+  name: Save Qn_SW pixels toggle
+  description: Option to save time series of net shortwave radiation
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: Qsw_ts_file
+  name: Save Qn_SW pixels file
+  description: Filename for time series of net shortwave radiation
+  value:
+    type: string
+    default: '[case_prefix]_0D-QnSW.nc'
+    units: W/m^2
+- key: SAVE_QLW_PIXELS
+  name: Save Qn_LW pixels toggle
+  description: Option to save time series of net longwave radiation
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: Qlw_ts_file
+  name: Save Qn_LW pixels file
+  description: Filename for time series of net longwave radiation
+  value:
+    type: string
+    default: '[case_prefix]_0D-QnLW.nc'
+    units: W/m^2
+- key: SAVE_EMA_PIXELS
+  name: Save em_air pixels toggle
+  description: Option to save time series of air emissivity
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: ema_ts_file
+  name: Save em_air pixels file
+  description: Filename for time series of air emissivity in
+  value:
+    type: string
+    default: '[case_prefix]_0D-emair.nc'
+    units: unitless
+About:
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: Meteorology
+    units: '-'
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+    units: '-'
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: Url for html help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Meteorology
+    units: '-'

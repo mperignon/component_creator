@@ -1,0 +1,632 @@
+<dialog name="Saturated Zone: Darcy Layers Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/SatZoneDarcyLayers/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>long</type>
+      <range>
+        <min>1</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/n_layers">
+      <label>Number of soil layers:</label>
+      <default>6</default>
+      <type>int</type>
+      <range>
+        <min>1</min>
+        <max>6</max>
+      </range>
+      <help_brief>number of soil layers</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/dt">
+      <label>Time step:</label>
+      <default>3600.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>timestep for subsurface flow [sec]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/elev_type">
+      <label>DEM type:</label>
+      <default>Grid</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/elev">
+      <label>DEM:</label>
+      <default>[site_prefix]_DEM.rtg</default>
+      <type>string</type>
+      <help_brief>land surface elevation [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/h0_table_type">
+      <label>h0_table type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/h0_table">
+      <label>h0_table:</label>
+      <default>0.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e4</max>
+      </range>
+      <help_brief>initial water table height [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/d_freeze_type">
+      <label>d_freeze type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/d_freeze">
+      <label>d_freeze:</label>
+      <default>0.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e4</max>
+      </range>
+      <help_brief>freeze depth below surface [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/d_thaw_type">
+      <label>d_thaw type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/d_thaw">
+      <label>d_thaw:</label>
+      <default>9999.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e4</max>
+      </range>
+      <help_brief>thaw depth below surface [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 1">
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_type_0">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_0">
+      <label>K_sat:</label>
+      <default>0.000050</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_type_0">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_0">
+      <label>theta_sat:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_type_0">
+      <label>thickness type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_0">
+      <label>thickness:</label>
+      <default>0.100</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>soil layer thickness [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 2">
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_type_1">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_1">
+      <label>K_sat:</label>
+      <default>0.000050</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_type_1">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_1">
+      <label>theta_sat:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_type_1">
+      <label>thickness type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_1">
+      <label>thickness:</label>
+      <default>0.100</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>soil layer thickness [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 3">
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_type_2">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_2">
+      <label>K_sat:</label>
+      <default>0.000050</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_type_2">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_2">
+      <label>theta_sat:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_type_2">
+      <label>thickness type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_2">
+      <label>thickness:</label>
+      <default>0.100</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>soil layer thickness [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 4">
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_type_3">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_3">
+      <label>K_sat:</label>
+      <default>0.000050</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_type_3">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_3">
+      <label>theta_sat:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_type_3">
+      <label>thickness type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_3">
+      <label>thickness:</label>
+      <default>0.100</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>soil layer thickness [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 5">
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_type_4">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_4">
+      <label>K_sat:</label>
+      <default>0.000050</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_type_4">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_4">
+      <label>theta_sat:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_type_4">
+      <label>thickness type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_4">
+      <label>thickness:</label>
+      <default>0.100</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>soil layer thickness [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Layer 6">
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_type_5">
+      <label>K_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/Ks_5">
+      <label>K_sat:</label>
+      <default>0.000050</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e-2</max>
+      </range>
+      <help_brief>sat. hydraulic conductivity [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_type_5">
+      <label>theta_sat type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/qs_5">
+      <label>theta_sat:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>sat. soil water content [none]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_type_5">
+      <label>thickness type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/th_5">
+      <label>thickness:</label>
+      <default>0.100</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>soil layer thickness [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output">
+    <entry name="/SatZoneDarcyLayers/Input/Var/save_grid_dt">
+      <label>Save grid timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved grids [sec]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/SAVE_HT_GRIDS">
+      <label>Save ht grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of water table height {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/ht_gs_file">
+      <label>Save ht grids file:</label>
+      <default>[case_prefix]_2D-htable.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of water table height [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/SAVE_DF_GRIDS">
+      <label>Save df grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of freeze depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/df_gs_file">
+      <label>Save df grids file:</label>
+      <default>[case_prefix]_2D-dfreeze.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of freeze depth [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/SAVE_DT_GRIDS">
+      <label>Save dt grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of thaw depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/dt_gs_file">
+      <label>Save dt grids file:</label>
+      <default>[case_prefix]_2D-dthaw.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of thaw depth [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/save_pixels_dt">
+      <label>Save pixels timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/SAVE_HT_PIXELS">
+      <label>Save ht pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of water table height {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/ht_ts_file">
+      <label>Save ht pixels file:</label>
+      <default>[case_prefix]_0D-htable.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of water table height [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/SAVE_DF_PIXELS">
+      <label>Save df pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of freeze depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/df_ts_file">
+      <label>Save df pixels file:</label>
+      <default>[case_prefix]_0D-dfreeze.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of freeze depth [m]</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/SAVE_DT_PIXELS">
+      <label>Save dt pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of thaw depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/Input/Var/dt_ts_file">
+      <label>Save dt pixels file:</label>
+      <default>[case_prefix]_0D-dthaw.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of thaw depth [m]</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/SatZoneDarcyLayers/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>SatZoneDarcyLayers</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/SatZoneDarcyLayers/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Saturated_Zone-Darcy_Layers</default>
+<!--      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Saturated_Zone-Darcy_Law</default> -->
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

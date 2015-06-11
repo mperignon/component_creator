@@ -1,0 +1,102 @@
+Input Parameters:
+- key: comp_status
+  name: Component status
+  description: Component status
+  value:
+    type: choice
+    default: Enabled
+    choices:
+    - Enabled
+    - Disabled
+    units: '-'
+- key: in_directory
+  name: Input directory
+  description: Input directory
+  value:
+    type: String
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+    units: '-'
+- key: out_directory
+  name: Output directory
+  description: Output directory
+  value:
+    type: String
+    default: ~/CMT_Output/
+    units: '-'
+- key: site_prefix
+  name: Site prefix
+  description: File prefix for the study site
+  value:
+    type: String
+    default: Treynor
+    units: '-'
+- key: case_prefix
+  name: Case prefix
+  description: File prefix for the model scenario
+  value:
+    type: String
+    default: Case5
+    units: '-'
+- key: stop_method
+  name: Stopping method
+  description: Stopping method
+  value:
+    type: choice
+    default: Q_peak_fraction
+    choices:
+    - Q_peak_fraction
+    - Until_model_time
+    - Until_n_steps
+    units: '-'
+- key: Qp_fraction
+  name: Q_peak fraction
+  description: Value for q_peak_fraction method
+  value:
+    type: Float
+    default: '0.05'
+    range:
+      min: '0.0'
+      max: '1.0'
+    units: '-'
+- key: T_stop_model
+  name: Model stop time
+  description: Value for until_model_time method
+  value:
+    type: Float
+    default: '20.0'
+    range:
+      min: '0.0'
+      max: 1e9
+    units: minutes
+- key: n_steps
+  name: Number of steps
+  description: Value for until_n_steps method
+  value:
+    type: Int
+    default: '100'
+    range:
+      min: '1'
+      max: '1000000000'
+    units: '-'
+About:
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: TopoFlow
+    units: '-'
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+    units: '-'
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: Url for html help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow
+    units: '-'

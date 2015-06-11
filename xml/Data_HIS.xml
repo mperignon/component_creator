@@ -1,0 +1,229 @@
+<dialog name="Data: HIS Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/DataHIS/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Query">
+    <entry name="/DataHIS/Input/Var/data_keyword">
+      <label>Data keyword:</label>
+      <default>Precipitation</default>
+      <type>string</type>
+      <help_brief>HIS data keyword</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/west_edge_lon">
+      <label>West edge longitude:</label>
+      <default>-111.0</default>
+      <type>float</type>
+      <range>
+        <min>-180.0</min>
+        <max>180.0</max>
+      </range>
+      <help_brief>longitude of west edge of geographic region [dec. degrees]</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/east_edge_lon">
+      <label>East edge longitude:</label>
+      <default>-110.0</default>
+      <type>float</type>
+      <range>
+        <min>-180.0</min>
+        <max>180.0</max>
+      </range>
+      <help_brief>longitude of east edge of geographic region [dec. degrees]</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/north_edge_lat">
+      <label>North edge latitude:</label>
+      <default>42.0</default>
+      <type>float</type>
+      <range>
+        <min>-90.0</min>
+        <max>90.0</max>
+      </range>
+      <help_brief>latitude of north edge of geographic region [dec. degrees]</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/south_edge_lat">
+      <label>South edge latitude:</label>
+      <default>41.0</default>
+      <type>float</type>
+      <range>
+        <min>-90.0</min>
+        <max>90.0</max>
+      </range>
+      <help_brief>latitude of south edge of geographic region [dec. degrees]</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/start_month">
+      <label>Start month:</label>
+      <default>January</default>
+      <type>string</type>
+      <help_brief>start month {January; February; March; April; May; June; July; August; September; October; November; December}</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/start_day">
+      <label>Start day:</label>
+      <default>1</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>31</max>
+      </range>
+      <help_brief>start day</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/start_year">
+      <label>Start year:</label>
+      <default>1998</default>
+      <type>int</type>
+      <range>
+        <min>1900</min>
+        <max>2020</max>
+      </range>
+      <help_brief>start year</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/stop_month">
+      <label>Stop month:</label>
+      <default>January</default>
+      <type>string</type>
+      <help_brief>stop month {January; February; March; April; May; June; July; August; September; October; November; December}</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/stop_day">
+      <label>Stop day:</label>
+      <default>1</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>31</max>
+      </range>
+      <help_brief>stop day</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/stop_year">
+      <label>Stop year:</label>
+      <default>2010</default>
+      <type>int</type>
+      <range>
+        <min>1900</min>
+        <max>2020</max>
+      </range>
+      <help_brief>stop year</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/max_n_values">
+      <label>Max values per series:</label>
+      <default>1000</default>
+      <type>int</type>
+      <range>
+        <min>1</min>
+        <max>1000000</max>
+      </range>
+      <help_brief>max number of values allowed in any time series</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/max_n_series">
+      <label>Max number of series:</label>
+      <default>100</default>
+      <type>int</type>
+      <range>
+        <min>1</min>
+        <max>100000</max>
+      </range>
+      <help_brief>max number of time series allows in the report</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output">
+    <entry name="/DataHIS/Input/Var/save_pixels_dt">
+      <label>Save time series timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/SAVE_DAT_PIXELS">
+      <label>Save time series toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/DataHIS/Input/Var/dat_ts_file">
+      <label>Save time series file:</label>
+      <default>[case_prefix]_0D-data.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/DataHIS/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>DataHIS</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/DataHIS/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

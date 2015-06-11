@@ -1,0 +1,344 @@
+<dialog name="Snowmelt: Degree-Day Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/SnowDegreeDay/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>long</type>
+      <range>
+        <min>1</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/dt">
+      <label>Time step:</label>
+      <default>3600.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>timestep for snowmelt process [sec]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/Cp_snow_type">
+      <label>Cp_snow type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/Cp_snow">
+      <label>Cp_snow:</label>
+      <default>2090.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>3e3</max>
+      </range>
+      <help_brief>heat capacity of snow [J/kg/K]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/rho_snow_type">
+      <label>rho_snow type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/rho_snow">
+      <label>rho_snow:</label>
+      <default>300.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>density of snow [kg/m^3]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/c0_type">
+      <label>c0 type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/c0">
+      <label>c0:</label>
+      <default>2.700</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>degree-day coefficient [mm/day/deg C]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/T0_type">
+      <label>T0 type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/T0">
+      <label>T0:</label>
+      <default>-0.200</default>
+      <type>float</type>
+      <range>
+        <min>-100</min>
+        <max>100</max>
+      </range>
+      <help_brief>reference temperature [deg C]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/h0_snow_type">
+      <label>h0_snow type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/h0_snow">
+      <label>h0_snow:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>20.0</max>
+      </range>
+      <help_brief>depth of snow [m]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/h0_swe_type">
+      <label>h0_swe type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/h0_swe">
+      <label>h0_swe:</label>
+      <default>0.150</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>20.0</max>
+      </range>
+      <help_brief>depth of snow water equivalent (SWE) [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 1">
+    <entry name="/SnowDegreeDay/Input/Var/save_grid_dt">
+      <label>Save grid timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved grids [sec]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_MR_GRIDS">
+      <label>Save mr grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of snow meltrate {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/mr_gs_file">
+      <label>Save mr grids file:</label>
+      <default>[case_prefix]_2D-SMrate.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of snow meltrate [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_HS_GRIDS">
+      <label>Save hs grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of snow depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/hs_gs_file">
+      <label>Save hs grids file:</label>
+      <default>[case_prefix]_2D-hsnow.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of snow depth [m]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_SW_GRIDS">
+      <label>Save sw grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of snow water equivalent {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/sw_gs_file">
+      <label>Save sw grids file:</label>
+      <default>[case_prefix]_2D-hswe.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of snow water equivalent [m]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_CC_GRIDS">
+      <label>Save cc grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of cold content {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/cc_gs_file">
+      <label>Save cc grids file:</label>
+      <default>[case_prefix]_2D-Ecc.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of cold content [J/m^2]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 2">
+    <entry name="/SnowDegreeDay/Input/Var/save_pixels_dt">
+      <label>Save pixels timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_MR_PIXELS">
+      <label>Save mr pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of snow meltrate {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/mr_ts_file">
+      <label>Save mr pixels file:</label>
+      <default>[case_prefix]_0D-SMrate.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of  [m/s]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_HS_PIXELS">
+      <label>Save hs pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of snow depth {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/hs_ts_file">
+      <label>Save hs pixels file:</label>
+      <default>[case_prefix]_0D-hsnow.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of snow depth [m]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_SW_PIXELS">
+      <label>Save sw pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of snow water equivalent {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/sw_ts_file">
+      <label>Save sw pixels file:</label>
+      <default>[case_prefix]_0D-hswe.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of snow water equivalent [m]</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/SAVE_CC_PIXELS">
+      <label>Save cc pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of cold content {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/SnowDegreeDay/Input/Var/cc_ts_file">
+      <label>Save cc pixels file:</label>
+      <default>[case_prefix]_0D-Ecc.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of cold content [J/m^2]</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/SnowDegreeDay/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>SnowDegreeDay</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/SnowDegreeDay/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Degree-Day</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

@@ -1,0 +1,112 @@
+Input:
+- key: comp_status
+  name: Component status
+  description: Component status
+  value:
+    type: choice
+    default: Enabled
+    choices:
+    - Enabled
+    - Disabled
+    units: '-'
+- key: in_directory
+  name: Input directory
+  description: Input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+    units: '-'
+- key: out_directory
+  name: Output directory
+  description: Output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+    units: '-'
+- key: site_prefix
+  name: Site prefix
+  description: File prefix for the study site
+  value:
+    type: string
+    default: Treynor
+    units: '-'
+- key: case_prefix
+  name: Case prefix
+  description: File prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+    units: '-'
+- key: use_sources
+  name: Use sources toggle
+  description: Option to use sources
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: source_file
+  name: Sources file
+  description: Source information file
+  value:
+    type: string
+    default: '[site_prefix]_sources.txt'
+    units: '-'
+- key: use_sinks
+  name: Use sinks toggle
+  description: Option to use sinks
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: sink_file
+  name: Sinks file
+  description: Sink information file
+  value:
+    type: string
+    default: '[site_prefix]_sinks.txt'
+    units: '-'
+- key: use_canals
+  name: Use canals toggle
+  description: Option to use canals
+  value:
+    type: choice
+    default: 'No'
+    choices:
+    - 'Yes'
+    - 'No'
+    units: '-'
+- key: canal_file
+  name: Canal file
+  description: Canal information file
+  value:
+    type: string
+    default: '[site_prefix]_canals.txt'
+    units: '-'
+About:
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: Diversions
+    units: '-'
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+    units: '-'
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: Url for html help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Diversions
+    units: '-'

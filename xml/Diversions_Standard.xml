@@ -1,0 +1,107 @@
+<dialog name="Diversions: Flow Amount Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/Diversions/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/use_sources">
+      <label>Use sources toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to use sources {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/source_file">
+      <label>Sources file:</label>
+      <default>[site_prefix]_sources.txt</default>
+      <type>string</type>
+      <help_brief>source information file</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/use_sinks">
+      <label>Use sinks toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to use sinks {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/sink_file">
+      <label>Sinks file:</label>
+      <default>[site_prefix]_sinks.txt</default>
+      <type>string</type>
+      <help_brief>sink information file</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/use_canals">
+      <label>Use canals toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to use canals {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Diversions/Input/Var/canal_file">
+      <label>Canal file:</label>
+      <default>[site_prefix]_canals.txt</default>
+      <type>string</type>
+      <help_brief>canal information file</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/Diversions/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>Diversions</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/Diversions/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Diversions</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

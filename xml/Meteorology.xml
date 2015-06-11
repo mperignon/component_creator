@@ -1,0 +1,613 @@
+<dialog name="Meteorology: First Method">
+<!-- ====================================================================== -->
+  <tab name="Input 1">
+    <entry name="/Meteorology/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>long</type>
+      <range>
+        <min>1</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/dt">
+      <label>Time step:</label>
+      <default>60.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>meteorology time step [sec]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/rho_H2O_type">
+      <label>rho_H2O type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/rho_H2O">
+      <label>rho_H2O:</label>
+      <default>1000.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>2000.0</max>
+      </range>
+      <help_brief>density of water [kg/m^3]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/Cp_air_type">
+      <label>Cp_air type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/Cp_air">
+      <label>Cp_air:</label>
+      <default>1005.7000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>2000.0</max>
+      </range>
+      <help_brief>heat capacity of air [J/kg/K]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/rho_air_type">
+      <label>rho_air type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/rho_air">
+      <label>rho_air:</label>
+      <default>1.26139998</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>2.0</max>
+      </range>
+      <help_brief>density of air [kg/m^3]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/P_type">
+      <label>precip. rates type:</label>
+      <default>Time_Series</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/P">
+      <label>precip. rates:</label>
+      <default>[case_prefix]_rain_rates.txt</default>
+      <type>string</type>
+      <help_brief>precipitation rate [mm/hr]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/PRECIP_ONLY">
+      <label>PRECIP_ONLY toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>toggle to turn off all variable updates except precip. {Yes; No}</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Input 2">
+    <entry name="/Meteorology/Input/Var/T_air_type">
+      <label>T_air type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/T_air">
+      <label>T_air:</label>
+      <default>20.000</default>
+      <type>float</type>
+      <range>
+        <min>-100.0</min>
+        <max>150.0</max>
+      </range>
+      <help_brief>temperature of air [deg C]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/T_surf_type">
+      <label>T_surf type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/T_surf">
+      <label>T_surf:</label>
+      <default>-5.000</default>
+      <type>float</type>
+      <range>
+        <min>-100.0</min>
+        <max>150.0</max>
+      </range>
+      <help_brief>temperature of surface [deg C]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/RH_type">
+      <label>RH type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/RH">
+      <label>RH:</label>
+      <default>0.500</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>relative humidity [none]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/p0_type">
+      <label>p0 type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/p0">
+      <label>p0:</label>
+      <default>1000.000</default>
+      <type>float</type>
+      <range>
+        <min>700.0</min>
+        <max>1500.0</max>
+      </range>
+      <help_brief>atmospheric pressure [mbar]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/uz_type">
+      <label>uz type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/uz">
+      <label>uz:</label>
+      <default>3.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>20.0</max>
+      </range>
+      <help_brief>wind velocity at height z [m/s]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/z_type">
+      <label>z type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/z">
+      <label>z:</label>
+      <default>10.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>wind reference height [m]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/z0_air_type">
+      <label>z0_air type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/z0_air">
+      <label>z0_air:</label>
+      <default>0.0200</default>
+      <type>float</type>
+      <range>
+        <min>1e-4</min>
+        <max>1e2</max>
+      </range>
+      <help_brief>surface roughness length scale for wind [m]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Input 3">
+    <entry name="/Meteorology/Input/Var/albedo_type">
+      <label>albedo type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/albedo">
+      <label>albedo:</label>
+      <default>0.8</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>surface albedo in [0,1] [unitless]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/em_surf_type">
+      <label>emissivity type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/em_surf">
+      <label>emissivity:</label>
+      <default>0.98</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>surface emissivity in [0,1] [unitless]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/dust_atten_type">
+      <label>dust atten. type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/dust_atten">
+      <label>dust attenuation:</label>
+      <default>0.08</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>0.3</max>
+      </range>
+      <help_brief>dust attenuation factor in [0,0.3], [unitless]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/cloud_factor_type">
+      <label>cloud factor type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/cloud_factor">
+      <label>cloud factor:</label>
+      <default>0.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>cloudiness factor, C,  in [0,1] (0 for no clouds)  [unitless]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/canopy_factor_type">
+      <label>canopy factor type:</label>
+      <default>Scalar</default>
+      <type>string</type>
+      <help_brief>allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/canopy_factor">
+      <label>canopy factor:</label>
+      <default>0.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1.0</max>
+      </range>
+      <help_brief>canopy coverage factor, F, in [0,1],  [unitless]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/slope_grid_file">
+      <label>slope grid file:</label>
+      <default>[site_prefix]_slope.bin</default>
+      <type>string</type>
+      <help_brief>flat binary, row-major file with grid of 4-byte slopes</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/aspect_grid_file">
+      <label>aspect grid file:</label>
+      <default>[site_prefix]_aspect.bin</default>
+      <type>string</type>
+      <help_brief>flat binary, row-major file with grid of 4-byte aspects</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/GMT_offset">
+      <label>time zone offset:</label>
+      <default>0</default>
+      <type>string</type>
+      <help_brief>time zone offset from GMT {-12; -11; -10; -9; -8; -7; -6; -5; -4; -3; -2; -1; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/start_month">
+      <label>start month</label>
+      <default>January</default>
+      <type>string</type>
+      <help_brief>start month {January; February; March; April; May; June; July; August; September; October; November; December}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/start_day">
+      <label>start_day</label>
+      <default>1</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>31</max>
+      </range>
+      <help_brief>start day</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/start_hour">
+      <label>start_hour</label>
+      <default>0.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>23.99</max>
+      </range>
+      <help_brief>start hour</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 1">
+    <entry name="/Meteorology/Input/Var/save_grid_dt">
+      <label>Save grid timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved grids [sec]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_EA_GRIDS">
+      <label>Save e_air grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of vapor pressure (in air) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/ea_gs_file">
+      <label>Save e_air grids toggle:</label>
+      <default>[case_prefix]_2D-eair.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of vapor pressure [mbar] (air)</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_ES_GRIDS">
+      <label>Save e_surf grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of vapor pressure (at surf) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/es_gs_file">
+      <label>Save e_surf grids file:</label>
+      <default>[case_prefix]_2D-esurf.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of vapor pressure [mbar] (surf)</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_QSW_GRIDS">
+      <label>Save Qn_SW grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of net shortwave radiation {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/Qsw_gs_file">
+      <label>Save Qn_SW grids file:</label>
+      <default>[case_prefix]_2D-QnSW.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of net shortwave radiation [W/m^2]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_QLW_GRIDS">
+      <label>Save Qn_LW grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of net longwave radiation {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/Qlw_gs_file">
+      <label>Save Qn_LW grids file:</label>
+      <default>[case_prefix]_2D-QnLW.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of net longwave radiation [W/m^2]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_EMA_GRIDS">
+      <label>Save em_air grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of air emissivity {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/ema_gs_file">
+      <label>Save em_air grids file:</label>
+      <default>[case_prefix]_2D-emair.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of air emissivity in [0,1] [unitless]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output 2">
+    <entry name="/Meteorology/Input/Var/save_pixels_dt">
+      <label>Save pixels timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_EA_PIXELS">
+      <label>Save e_air pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of sat. vapor press. (in air) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/ea_ts_file">
+      <label>Save e_air pixels file:</label>
+      <default>[case_prefix]_0D-eair.nc</default>
+      <type>string</type>
+      <help_brief>filename for time series of sat. vapor press. [mbar] (in air)</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_ES_PIXELS">
+      <label>Save e_surf pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of sat. vapor press. (at surf) {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/es_ts_file">
+      <label>Save e_surf pixels file:</label>
+      <default>[case_prefix]_0D-esurf.nc</default>
+      <type>string</type>
+      <help_brief>filename for time series of sat. vapor press. [mbar] (at surf)</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_QSW_PIXELS">
+      <label>Save Qn_SW pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of net shortwave radiation {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/Qsw_ts_file">
+      <label>Save Qn_SW pixels file:</label>
+      <default>[case_prefix]_0D-QnSW.nc</default>
+      <type>string</type>
+      <help_brief>filename for time series of net shortwave radiation [W/m^2]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_QLW_PIXELS">
+      <label>Save Qn_LW pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of net longwave radiation {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/Qlw_ts_file">
+      <label>Save Qn_LW pixels file:</label>
+      <default>[case_prefix]_0D-QnLW.nc</default>
+      <type>string</type>
+      <help_brief>filename for time series of net longwave radiation [W/m^2]</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/SAVE_EMA_PIXELS">
+      <label>Save em_air pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of air emissivity {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/Meteorology/Input/Var/ema_ts_file">
+      <label>Save em_air pixels file:</label>
+      <default>[case_prefix]_0D-emair.nc</default>
+      <type>string</type>
+      <help_brief>filename for time series of air emissivity in [0,1] [unitless]</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/Meteorology/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>Meteorology</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/Meteorology/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Meteorology</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

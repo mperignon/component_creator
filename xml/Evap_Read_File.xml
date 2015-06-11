@@ -1,0 +1,155 @@
+<dialog name="Evaporation: Read File Method">
+<!-- ====================================================================== -->
+  <tab name="Input">
+    <entry name="/EvapReadFile/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>long</type>
+      <range>
+        <min>1</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/dt">
+      <label>Time step:</label>
+      <default>10800.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e4</max>
+      </range>
+      <help_brief>timestep for evaporation rate [sec]</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/ET_rate">
+      <label>ET rate:</label>
+      <default>[case_prefix]_2D-ETrate-in.nc</default>
+      <type>string</type>
+      <help_brief>Grid Sequence [mm/hr]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output">
+    <entry name="/EvapReadFile/Input/Var/save_grid_dt">
+      <label>Save grid timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between saved grids [sec]</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/SAVE_ER_GRIDS">
+      <label>Save er grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save grids of evap. rate [mm/hr] {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/er_gs_file">
+      <label>Save er grids file:</label>
+      <default>[case_prefix]_2D-ETrate.nc</default>
+      <type>string</type>
+      <help_brief>filename for grid stack of evap. rate [mm/hr]</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/save_pixels_dt">
+      <label>Save pixels timestep:</label>
+      <default>60.000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>time interval between time series values [sec]</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/SAVE_ER_PIXELS">
+      <label>Save er pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save time series of evap. rate {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/EvapReadFile/Input/Var/er_ts_file">
+      <label>Save er pixels file:</label>
+      <default>[case_prefix]_0D-ETrate.txt</default>
+      <type>string</type>
+      <help_brief>filename for time series of evap. rate [mm/hr]</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/EvapReadFile/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>EvapReadFile</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/EvapReadFile/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Scott D. Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Read_File</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+

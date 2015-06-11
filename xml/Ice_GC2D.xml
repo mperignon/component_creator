@@ -1,0 +1,551 @@
+<dialog name="Icemelt: GC2D Model Method">
+<!-- ====================================================================== -->
+  <tab name="Input 1">
+    <entry name="/IceGC2D/Input/Var/comp_status">
+      <label>Component status:</label>
+      <default>Enabled</default>
+      <type>string</type>
+      <help_brief>component status {Enabled; Disabled}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/in_directory">
+      <label>Input directory:</label>
+      <default>/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/</default>
+      <type>string</type>
+      <help_brief>input directory</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/out_directory">
+      <label>Output directory:</label>
+      <default>~/CMT_Output/</default>
+      <type>string</type>
+      <help_brief>output directory</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/site_prefix">
+      <label>Site prefix:</label>
+      <default>Treynor</default>
+      <type>string</type>
+      <help_brief>file prefix for the study site</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/case_prefix">
+      <label>Case prefix:</label>
+      <default>Case5</default>
+      <type>string</type>
+      <help_brief>file prefix for the model scenario</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/n_steps">
+      <label>Number of steps:</label>
+      <default>10</default>
+      <type>int</type>
+      <range>
+        <min>0.0</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>number of time steps for simulation</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/dt">
+      <label>Time step:</label>
+      <default>0.1</default>
+      <type>float</type>
+      <range>
+        <min>0</min>
+        <max>100</max>
+      </range>
+      <help_brief>ice process timestep [years]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/dt_max">
+      <label>Max timestep:</label>
+      <default>0.4</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>100</max>
+      </range>
+      <help_brief>max timestep [years]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/t_max">
+      <label>Max simulation time:</label>
+      <default>100000</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>max time to simulate [years]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Input 2">
+    <entry name="/IceGC2D/Input/Var/DEM_file">
+      <label>DEM file:</label>
+      <default>[site_prefix]_DEM.rtg</default>
+      <type>string</type>
+      <help_brief>binary file containing a DEM [m]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/H0_file">
+      <label>Init. ice depth file:</label>
+      <default>None</default>
+      <type>string</type>
+      <help_brief>binary file containing initial ice depth [m]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/min_glacier_thick">
+      <label>Min ice depth:</label>
+      <default>1.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1000</max>
+      </range>
+      <help_brief>min glacier thickness</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/glens_A">
+      <label>Glen's Law param, a:</label>
+      <default>2.142e-16</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>3e-15</max>
+      </range>
+      <help_brief>Glen's Law exponent</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/B">
+      <label>Glen's Law coeff, B:</label>
+      <default>0.0012</default>
+      <type>float</type>
+      <range>
+        <min>1e-3</min>
+        <max>0.01</max>
+      </range>
+      <help_brief>[m / (Pa * yr)], see MacGregor (2000)</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/char_sliding_vel">
+      <label>Char. sliding velocity:</label>
+      <default>10.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>100.0</max>
+      </range>
+      <help_brief>characteristic sliding velocity [*** units needed]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/char_tau_bed">
+      <label>Char. bed stress:</label>
+      <default>100000.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e6</max>
+      </range>
+      <help_brief>characteristic shear stress at the bed [**** units needed]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/depth_to_water_table">
+      <label>Depth to water table:</label>
+      <default>20.0</default>
+      <type>float</type>
+      <range>
+        <min>0</min>
+        <max>1000.0</max>
+      </range>
+      <help_brief>distance from ice surface to water table [meters]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/max_float_fraction">
+      <label>Max float fraction:</label>
+      <default>80.0</default>
+      <type>float</type>
+      <range>
+        <min>0</min>
+        <max>100.0</max>
+      </range>
+      <help_brief>limits the water level in ice [percent]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/Hp_eff">
+      <label>Hp effective (****):</label>
+      <default>20.0</default>
+      <type>float</type>
+      <range>
+        <min>0</min>
+        <max>100.0</max>
+      </range>
+      <help_brief>effective pressure [meters] of water</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Input 3">
+    <entry name="/IceGC2D/Input/Var/init_ELA">
+      <label>Initial ELA value:</label>
+      <default>3350.0</default>
+      <type>float</type>
+      <range>
+        <min>2500.0</min>
+        <max>4500.0</max>
+      </range>
+      <help_brief>Equilibrium Line Altitude  [meters]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/ELA_step_size">
+      <label>ELA step size:</label>
+      <default>-10.0</default>
+      <type>float</type>
+      <range>
+        <min>-100</min>
+        <max>100.0</max>
+      </range>
+      <help_brief>ELA step size [meters]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/ELA_step_interval">
+      <label>ELA step interval:</label>
+      <default>500.0</default>
+      <type>float</type>
+      <range>
+        <min>50.0</min>
+        <max>1000.0</max>
+      </range>
+      <help_brief>ELA step interval  [meters]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/grad_Bz">
+      <label>Mass balance gradient:</label>
+      <default>0.01</default>
+      <type>float</type>
+      <range>
+        <min>1e-3</min>
+        <max>0.1</max>
+      </range>
+      <help_brief>mass balance gradient in z [*** units needed]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/max_Bz">
+      <label>Max mass balance:</label>
+      <default>2.0</default>
+      <type>float</type>
+      <range>
+        <min>1.0</min>
+        <max>10.0</max>
+      </range>
+      <help_brief>maximum allowed mass balance [*** units needed]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/spinup_time">
+      <label>Spinup time:</label>
+      <default>200.0</default>
+      <type>float</type>
+      <range>
+        <min>0.0</min>
+        <max>1e3</max>
+      </range>
+      <help_brief>spinup time [years]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/sea_level">
+      <label>Sea level:</label>
+      <default>-100</default>
+      <type>float</type>
+      <range>
+        <min>-200.0</min>
+        <max>200.0</max>
+      </range>
+      <help_brief>sea level [meters]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/Cp_ice">
+      <label>Heat capacity (ice):</label>
+      <default>2060.0</default>
+      <type>float</type>
+      <range>
+        <min>2000.0</min>
+        <max>2100.0</max>
+      </range>
+      <help_brief>specific heat capacity [J / (kg * K)]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/geothermal_heat_flux">
+      <label>Geothermal heat flux:</label>
+      <default>1.575e6</default>
+      <type>float</type>
+      <range>
+        <min>1e5</min>
+        <max>1e7</max>
+      </range>
+      <help_brief>geothermal heat flux  [(J / year) / m^2]</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/geothermal_gradient">
+      <label>Geothermal gradient:</label>
+      <default>-0.0255</default>
+      <type>float</type>
+      <range>
+        <min>-0.1</min>
+        <max>0.0</max>
+      </range>
+      <help_brief>geothermal gradient  [*** deg_C / meter ??]</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Toggles">
+    <entry name="/IceGC2D/Input/Var/VARIABLE_DT_TOGGLE">
+      <label>Variable dt toggle:</label>
+      <default>1</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <help_brief>use variable/adaptive timestep  (0 = no, 1 = yes)</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/INIT_COND_TOGGLE">
+      <label>Init. condition choice:</label>
+      <default>1</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <help_brief>0 = ??, 1 = ??, 2 = ??</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/GENERIC_ICE_TOGGLE">
+      <label>Generic ice toggle:</label>
+      <default>0</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <help_brief>start w/ generic ice surface (0 = no, 1 = yes)</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/ICEFLOW_TOGGLE">
+      <label>Ice flow toggle:</label>
+      <default>1</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <help_brief>ice motion by deformation (0 = no, 1 = yes)</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/ICESLIDE_TOGGLE">
+      <label>Ice slide toggle</label>
+      <default>0</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <help_brief>ice motion by sliding (0 = no, 1 = yes)</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/FREEZE_ON_TOGGLE">
+      <label>Freeze on toggle:</label>
+      <default>0</default>
+      <type>int</type>
+      <range>
+        <min>0</min>
+        <max>1</max>
+      </range>
+      <help_brief>basal ice frozen to bed (0 = no, 1 = yes)</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/MASS_BALANCE_TOGGLE">
+      <label>Mass balance method:</label>
+      <default>ELA_LOWERING</default>
+      <type>string</type>
+      <help_brief>climate scenario {ZERO_BALANCE; CONSTANT_ELA; ELA_LOWERING; ELA_TIME_SERIES; EXTERNAL_FUNC; ELA_LOWERING2; BALANCE_FILE; D18O_TIME_SERIES}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/WEST_BC_TOGGLE">
+      <label>Western b.c. method:</label>
+      <default>ICE_FREE_BOUND</default>
+      <type>string</type>
+      <help_brief>boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND; SURF_ELEV_BOUND; SURF_SLOPE_BOUND}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/EAST_BC_TOGGLE">
+      <label>Eastern b.c. method:</label>
+      <default>ICE_FREE_BOUND</default>
+      <type>string</type>
+      <help_brief>boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND; SURF_ELEV_BOUND; SURF_SLOPE_BOUND}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/SOUTH_BC_TOGGLE">
+      <label>Southern b.c. method:</label>
+      <default>ICE_FREE_BOUND</default>
+      <type>string</type>
+      <help_brief>boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND; SURF_ELEV_BOUND; SURF_SLOPE_BOUND}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/NORTH_BC_TOGGLE">
+      <label>Northern b.c. method:</label>
+      <default>ICE_FREE_BOUND</default>
+      <type>string</type>
+      <help_brief>boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND; SURF_ELEV_BOUND; SURF_SLOPE_BOUND}</help_brief>
+    </entry>
+
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="Output">
+    <entry name="/IceGC2D/Input/Var/save_grid_dt">
+      <label>Save grid dt:</label>
+      <default>100.0</default>
+      <type>float</type>
+      <range>
+        <min>1.0</min>
+        <max>1e5</max>
+      </range>
+      <help_brief>interval to save grids, years</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/SAVE_HI_GRIDS">
+      <label>Save Hi grids toggle:</label>
+      <default>Yes</default>
+      <type>string</type>
+      <help_brief>option to save computed Hi grids {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/hi_gs_file">
+      <label>Save Hi grids file:</label>
+      <default>[case_prefix]_2D_iceH.nc</default>
+      <type>string</type>
+      <help_brief>filename for Hi grid stack</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/SAVE_ZI_GRIDS">
+      <label>Save Zi grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save computed Zi grids {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/zi_gs_file">
+      <label>Save Zi grids file:</label>
+      <default>[case_prefix]_2D_iceZ.nc</default>
+      <type>string</type>
+      <help_brief>filename for Zi grid stack</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/SAVE_MR_GRIDS">
+      <label>Save MR grids toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save computed MR grids {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/mr_gs_file">
+      <label>Save MR grids file:</label>
+      <default>[case_prefix]_2D_iceMR.nc</default>
+      <type>string</type>
+      <help_brief>filename for MR grid stack</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/save_pixels_dt">
+      <label>Save time series dt:</label>
+      <default>10.0</default>
+      <type>float</type>
+      <range>
+        <min>1.0</min>
+        <max>1000</max>
+      </range>
+      <help_brief>interval to save time series values, years</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/pixel_file">
+      <label>Monitored pixel file:</label>
+      <default>[case_prefix]_outlets.txt</default>
+      <type>string</type>
+      <help_brief>filename for monitored pixel file</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/SAVE_HI_PIXELS">
+      <label>Save Hi time series toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save computed Hi time series {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/hi_ts_file">
+      <label>Save Hi time series file:</label>
+      <default>[case_prefix]_0D_iceH.txt</default>
+      <type>string</type>
+      <help_brief>filename for Hi  time series</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/SAVE_ZI_PIXELS">
+      <label>Save Zi pixels toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save computed Zi time series {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/zi_ts_file">
+      <label>Save Zi time series file:</label>
+      <default>[case_prefix]_0D_iceZ.txt</default>
+      <type>string</type>
+      <help_brief>filename for Zi time series</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/SAVE_MR_PIXELS">
+      <label>Save MR time series toggle:</label>
+      <default>No</default>
+      <type>string</type>
+      <help_brief>option to save computed MR time series {Yes; No}</help_brief>
+    </entry>
+
+    <entry name="/IceGC2D/Input/Var/mr_ts_file">
+      <label>Save MR time series file:</label>
+      <default>[case_prefix]_0D_iceMR.txt</default>
+      <type>string</type>
+      <help_brief>filename for MR  time series</help_brief>
+    </entry>
+  </tab>
+
+<!-- ====================================================================== -->
+  <tab name="About">
+    <entry name="/IceGC2D/ModelName">
+      <label>Model name:</label>
+      <help_brief>Name of the model</help_brief>
+      <default>IceGC2D</default>
+      <type>String</type>
+    </entry>
+
+    <entry name="/IceGC2D/ModelAuthor">
+      <label>Author name:</label>
+      <help_brief>Name of the model author</help_brief>
+      <default>Mark Kessler, Eric Hutton, Scott Peckham </default>
+      <type>String</type>
+    </entry>
+
+    <entry name="HTML_HELP_FILE">
+      <label>HTML help file:</label>
+      <help_brief>URL for HTML help file</help_brief>
+      <default>http://csdms.colorado.edu/wiki/Model_help:Gc2d</default>
+      <type>String</type>
+    </entry>
+
+  </tab>
+</dialog>
+
