@@ -68,32 +68,41 @@ def yaml_to_json(comp_dir):
 
 def create_cfg_file(comp_dir):
 
-    comp_name = string.split(comp_dir,'/')[-1]
-    cfg_name = comp_name + '.cfg.in'
-    cfg_file = comp_dir + '/files/' + cfg_name
+	comp_name = string.split(comp_dir,'/')[-1]
+	cfg_name = comp_name + '.cfg.in'
+	cfg_file = comp_dir + '/files/' + cfg_name
 
-    # open parameters.json
-    p = open(comp_dir + '/db/parameters.json')
-    params = json.load(p)
-    params = [item for it in params.values() for item in it]
+	# open parameters.json
+	p = open(comp_dir + '/db/parameters.json')
+	allparams = json.load(p, object_pairs_hook = OrderedDict)
 
-    # header
-    head = [79*'=', 'Topoflow Config File for: ' + comp_name, 79*'=']
+	# header
+	head = ['#' + 79*'=', '# Topoflow Config File for: ' + comp_name]
 
-    # table
-    col1 = [str(obj['key']) for obj in params]
-    col2 = [str('${' + obj['key'] + '}') for obj in params]
-    col3 = [str(obj['value']['type']) for obj in params]
-    col4 = [str(obj['description']) + ' [' + str(obj['value']['units']) + ']' for obj in params]
-    col5 = [str(' {' + '; '.join(obj['value']['choices']) + '}') if obj['value'].has_key('choices') else '' for obj in params]
+	tablestr = head
 
-    table = ['{0:20}| {1:20}| {2:10}| {3}{4}'.format(col1[i],col2[i],col3[i],col4[i],col5[i]) for i in range(len(col1))]
-    tablestr = head + table
-    tablestr = '\n'.join(tablestr)
+	for k in allparams.keys():
+	
+		header = ['#' + 79*'=', '# ' + str(k)]
+	
+		params = allparams[k]
 
-    cfgfile_out = open(cfg_file, 'w')
-    cfgfile_out.write(tablestr)
-    cfgfile_out.close()
+		# table
+		col1 = [str(obj['key']) for obj in params]
+		col2 = [str('${' + obj['key'] + '}') for obj in params]
+		col3 = [str(obj['value']['type']) for obj in params]
+		col4 = [str(obj['description']) + ' [' + str(obj['value']['units']) + ']' for obj in params]
+		col5 = [str(' {' + '; '.join(obj['value']['choices']) + '}') if obj['value'].has_key('choices') else '' for obj in params]
+
+		table = ['{0:20}| {1:20}| {2:10}| {3}{4}'.format(col1[i],col2[i],col3[i],col4[i],col5[i]) for i in range(len(col1))]
+		tablestr = tablestr + header + table
+
+	
+	tablestr = '\n'.join(tablestr)
+
+	cfgfile_out = open(cfg_file, 'w')
+	cfgfile_out.write(tablestr)
+	cfgfile_out.close()
 
 
 def create_files_dot_json(comp_dir):
