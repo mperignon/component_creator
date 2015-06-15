@@ -1,0 +1,9 @@
+[
+  "atmosphere_water__rainfall_volume_flux", 
+  "glacier_ice__melt_volume_flux", 
+  "land_surface_water__baseflow_volume_flux", 
+  "land_surface_water__evaporation_volume_flux", 
+  "soil_surface_water__infiltration_volume_flux", 
+  "snowpack__melt_volume_flux", 
+  "water-liquid__mass-per-volume_density"
+]

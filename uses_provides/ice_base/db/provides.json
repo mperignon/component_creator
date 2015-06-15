@@ -1,0 +1,9 @@
+[
+  "glacier_ice__domain_time_integral_of_melt_volume_flux", 
+  "glacier_ice__melt_volume_flux", 
+  "glacier_top_surface__elevation", 
+  "glacier_ice__thickness", 
+  "model_grid_cell__x_length", 
+  "model_grid_cell__y_length", 
+  "model__time_step"
+]

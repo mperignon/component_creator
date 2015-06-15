@@ -1,0 +1,7 @@
+[
+  "land_surface__elevation", 
+  "land_surface_water__baseflow_volume_flux", 
+  "land_surface_water__domain_time_integral_of_baseflow_volume_flux", 
+  "model__time_step", 
+  "model_soil_layer-0__porosity"
+]

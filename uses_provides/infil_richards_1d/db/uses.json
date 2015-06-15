@@ -1,0 +1,8 @@
+[
+  "atmosphere_water__rainfall_volume_flux", 
+  "glacier_ice__melt_volume_flux", 
+  "land_surface__elevation", 
+  "land_surface_water__evaporation_volume_flux", 
+  "snowpack__melt_volume_flux", 
+  "soil_water_sat-zone_top_surface__elevation"
+]
