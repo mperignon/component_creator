@@ -89,7 +89,7 @@ def create_cfg_file(comp_dir):
 
 		# table
 		col1 = [str(obj['key']) for obj in params]
-		col2 = [str('${' + obj['key'] + '}') for obj in params]
+		col2 = [str('{' + obj['key'] + '}') for obj in params]
 		col3 = [str(obj['value']['type']) for obj in params]
 		col4 = [str(obj['description']) + ' [' + str(obj['value']['units']) + ']' for obj in params]
 		col5 = [str(' {' + '; '.join(obj['value']['choices']) + '}') if obj['value'].has_key('choices') else '' for obj in params]
