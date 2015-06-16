@@ -111,7 +111,7 @@ def create_files_dot_json(comp_dir):
     cfg_name = comp_name.title() + '.cfg.in'
 
     filesjson_out = open(comp_dir + '/db/files.json','w')
-    json.dump(cfg_name, filesjson_out)
+    json.dump([cfg_name], filesjson_out)
     filesjson_out.close()
 
 
