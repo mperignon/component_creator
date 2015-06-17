@@ -69,7 +69,7 @@ def yaml_to_json(comp_dir):
 def create_cfg_file(comp_dir):
 
 	comp_name = string.split(comp_dir,'/')[-1]
-	cfg_name = comp_name + '.cfg.in'
+	cfg_name = comp_name.title() + '.cfg.in'
 	cfg_file = comp_dir + '/files/' + cfg_name
 
 	# open parameters.json
@@ -89,7 +89,7 @@ def create_cfg_file(comp_dir):
 
 		# table
 		col1 = [str(obj['key']) for obj in params]
-		col2 = [str('${' + obj['key'] + '}') for obj in params]
+		col2 = [str('{' + obj['key'] + '}') for obj in params]
 		col3 = [str(obj['value']['type']) for obj in params]
 		col4 = [str(obj['description']) + ' [' + str(obj['value']['units']) + ']' for obj in params]
 		col5 = [str(' {' + '; '.join(obj['value']['choices']) + '}') if obj['value'].has_key('choices') else '' for obj in params]
@@ -108,10 +108,10 @@ def create_cfg_file(comp_dir):
 def create_files_dot_json(comp_dir):
     
     comp_name = string.split(comp_dir,'/')[-1]
-    cfg_name = comp_name + '.cfg.in'
+    cfg_name = comp_name.title() + '.cfg.in'
 
     filesjson_out = open(comp_dir + '/db/files.json','w')
-    json.dump(cfg_name, filesjson_out)
+    json.dump([cfg_name], filesjson_out)
     filesjson_out.close()
 
 
@@ -153,8 +153,8 @@ def create_info_dot_json(comp_dir):
 
     info['id'] = comp_name
     info['name'] = [str(i['value']['default']) for i in params if i['key'] == 'ModelName'][0]
-    info['class'] = string.capitalize(comp_name)
-    info['initialize_args'] = comp_name + '.cfg'
+    info['class'] = comp_name.title()
+    info['initialize_args'] = comp_name.title() + '.cfg'
     try: info['time_step'] = [str(i['value']['default']) for i in params if i['key'] == 'dt'][0]
     except: info['time_step'] = ''
     info['summary'] = ''
