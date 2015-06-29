@@ -1,0 +1,35 @@
+#===============================================================================
+# STM Config File for: AgDegNormalGravMixHyd
+#===============================================================================
+# Input
+t                   | {t}                 | float     | Time step in flood days [-]
+N                   | {N}                 | float     | Number of hydrograph entries [between 2 and 16 values]
+c                   | {c}                 | float     | Number of cycles per year [-]
+e                   | {e}                 | float     | Bed elevation at downstream end [m]
+L                   | {L}                 | float     | Reach length [m]
+S                   | {S}                 | float     | Initial bed slope [-]
+M                   | {M}                 | float     | Number of intervals [-]
+i                   | {i}                 | float     | Number of iterations before a print is made [-]
+p                   | {p}                 | float     | Number of prints desired [-]
+k                   | {k}                 | float     | Factor by which ds90 is multiplied for roughness height [-]
+n                   | {n}                 | float     | Factor by which ds90 is multiplied for active layer thickness [-]
+r                   | {r}                 | float     | Coefficient in manning-strickler relation [-]
+R                   | {R}                 | float     | Submerged specific gravity of gravel [-]
+l                   | {l}                 | float     | Bed porosity, gravel [-]
+u                   | {u}                 | float     | Upwinding coefficient for load spatial derivatives in exner equation (>0.5 suggested) [-]
+a                   | {a}                 | float     | Coefficient for material transferred to substrate as bed aggrades [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+H                   | {H}                 | float     | Water depth [m]
+tausg               | {tausg}             | float     | Shear stress on the bed surface [n/m2]
+eta                 | {eta}               | float     | Bed surface elevation [m]
+qbT                 | {qbT}               | float     | Bedload transport rate [m2/s]
+qbT/qbo             | {qbT/qbo}           | float     | Bedload transport rate relative to the feed rate [-]
+dsg                 | {dsg}               | float     | Geometric mean grain on the bed surface [mm]
+dlg                 | {dlg}               | float     | Geometric mean grain of the bedload [mm]
+qw                  | {qw}                | float     | Flow discharge [m2/s]
+qbo                 | {qbo}               | float     | Feed rate  [-]
+qbT                 | {qbT}               | float     | Bedload transport rate [m2/s]
+max                 | {max}               | float     | Value for max flow [-]
+end                 | {end}               | float     | Value for end flow [-]

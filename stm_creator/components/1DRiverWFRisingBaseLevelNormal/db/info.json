@@ -1,0 +1,14 @@
+{
+  "id": "1DRiverWFRisingBaseLevelNormal", 
+  "name": "1DRiverWFRisingBaseLevelNormal", 
+  "class": "1DRiverWFRisingBaseLevelNormal", 
+  "initialize_args": "1DRiverWFRisingBaseLevelNormal.cfg", 
+  "time_step": "", 
+  "summary": "This program uses a Chezy formulation and either the Engelund-Hansen relation for bedload in sandy streams or the Parker relation for bedload in gravel bed streams assuming a uniform grain size to solve for the bed evolution, width evolution, and depth evolution in time and space.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:1DRiverWFRisingBaseLevelNormal", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

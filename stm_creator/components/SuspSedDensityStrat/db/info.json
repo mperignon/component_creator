@@ -1,0 +1,14 @@
+{
+  "id": "SuspSedDensityStrat", 
+  "name": "SuspSedDensityStrat", 
+  "class": "SuspSedDensityStrat", 
+  "initialize_args": "SuspSedDensityStrat.cfg", 
+  "time_step": "", 
+  "summary": "This model is used for calculating the effect of density stratification on the vertical profiles of velocity and suspended sediment.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:SuspSedDensityStrat", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

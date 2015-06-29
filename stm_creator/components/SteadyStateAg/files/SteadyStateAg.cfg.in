@@ -1,0 +1,31 @@
+#===============================================================================
+# STM Config File for: SteadyStateAg
+#===============================================================================
+# Input
+G                   | {G}                 | float     | Mean annual bed material sediment feed rate [mt/yr]
+L                   | {L}                 | float     | Reach length (downchannel distance) [km]
+x                   | {x}                 | float     | Rate of sea level rise [mm/yr]
+Q                   | {Q}                 | float     | Bankfull water discharge [m^3/s]
+B                   | {B}                 | float     | Floodplain width [km]
+D                   | {D}                 | float     | Grain size [mm]
+V                   | {V}                 | float     | Fraction wash load deposited per unit bed material deposited [-]
+T                   | {T}                 | float     | Channel-forming shields number [-]
+a                   | {a}                 | float     | Coefficient in engelund-hansen bed material load relation [-]
+l                   | {l}                 | float     | Bed porosity [-]
+I                   | {I}                 | float     | Flood intermittence [-]
+C                   | {C}                 | float     | Chezy resistance coefficient [-]
+O                   | {O}                 | float     | Channel sinuosity [-]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+X                   | {X}                 | float     | Initial water surface elevation [-]
+t                   | {t}                 | float     | Time interval for plotting [yr]
+p                   | {p}                 | float     | Number of prints desired [-]
+#===============================================================================
+# Output
+xhat                | {xhat}              | float     | Dimensionless downstream coordinate [-]
+x                   | {x}                 | float     | Downstream coordinate [km]
+Qtbf                | {Qtbf}              | float     | Volume bed material transport during flood stage [m3/s]
+Sl                  | {Sl}                | float     | Bed slope [-]
+nhat                | {nhat}              | float     | Dimensionless deviatoric bed elevation [-]
+Bbf                 | {Bbf}               | float     | Bankfull channel width [m]
+Hbf                 | {Hbf}               | float     | Bankfull channel depth [m]
+eta                 | {eta}               | float     | Bed elevation [m]

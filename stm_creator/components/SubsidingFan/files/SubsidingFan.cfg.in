@@ -1,0 +1,33 @@
+#===============================================================================
+# STM Config File for: SubsidingFan
+#===============================================================================
+# Input
+q                   | {q}                 | float     | Upstream bed material sediment feed rate during floods [m^3/s]
+L                   | {L}                 | float     | Basin length [m]
+Q                   | {Q}                 | float     | Flood discharge [m^3/s]
+D                   | {D}                 | float     | Grain size of bed [mm]
+V                   | {V}                 | float     | Units of wash load deposited in the fan per unit bed material load [-]
+T                   | {T}                 | float     | Fan angle [degrees]
+l                   | {l}                 | float     | Bed porosity [-]
+I                   | {I}                 | float     | Intermittency [-]
+C                   | {C}                 | float     | Chezy resistance coefficient [-]
+O                   | {O}                 | float     | Channel sinuosity [-]
+s                   | {s}                 | float     | Subsidence rate [mm/yr] (must equal mean aggradation for perfect filling of hole; otherwise overfilled or underfilled)
+a                   | {a}                 | float     | Engelund-hansen coefficient [sand]
+n                   | {n}                 | float     | Engelund-hansen exponent [sand]
+S                   | {S}                 | float     | Channel-forming shields number [sand]
+P                   | {P}                 | float     | Parker coefficient [gravel]
+N                   | {N}                 | float     | Parker exponent [gravel]
+c                   | {c}                 | float     | Critical shields number [gravel]
+G                   | {G}                 | float     | Channel-forming shields number [gravel]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+M                   | {M}                 | float     | Number of spatial intervals [-]
+t                   | {t}                 | float     | Time step [yr]
+i                   | {i}                 | float     | Number of iterations desired [-]
+p                   | {p}                 | float     | Number of printouts desired [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+eta                 | {eta}               | float     | Bed surface elevation [m]
+Sl                  | {Sl}                | float     | Bed slope [-]
+qbT                 | {qbT}               | float     | Bedload transport rate [m3/s]

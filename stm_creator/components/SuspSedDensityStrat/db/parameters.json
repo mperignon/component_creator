@@ -1,0 +1,74 @@
+[
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Specific Gravity of Sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Sediment Grain Size", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "Flow Depth", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "k", 
+        "name": "k", 
+        "description": "Composite Roughness Height (including bedform effects)[mm]", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "u", 
+        "name": "u", 
+        "description": "Shear Velocity", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "v", 
+        "name": "v", 
+        "description": "Kinematic Viscosity of Water", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Shear Velocity due to Skin Friction OR Reference Volume Concentration", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "", 
+        "name": "", 
+        "description": " (user will be asked what they would like this constant to be)", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }
+]

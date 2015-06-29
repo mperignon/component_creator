@@ -1,0 +1,5 @@
+author : Gary Parker 
+email : parkerg@uiuc.edu
+version : 0.1
+doi : 10.1594/IEDA/100078
+license : Apache

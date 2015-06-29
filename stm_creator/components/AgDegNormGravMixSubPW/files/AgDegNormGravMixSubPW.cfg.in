@@ -1,0 +1,26 @@
+#===============================================================================
+# STM Config File for: AgDegNormGravMixSubPW
+#===============================================================================
+# Input
+q                   | {q}                 | float     | Water discharge/width [m^2/s]
+T                   | {T}                 | float     | Gravel input [m^2/s]
+I                   | {I}                 | float     | Intermittency [-]
+e                   | {e}                 | float     | Base level [m]
+S                   | {S}                 | float     | Initial bed slope [-]
+L                   | {L}                 | float     | Reach length [m]
+t                   | {t}                 | float     | Time step [days]
+M                   | {M}                 | float     | No. of intervals (100 or less) [-]
+p                   | {p}                 | float     | No. of prints [-]
+i                   | {i}                 | float     | No. of iterations per print [-]
+k                   | {k}                 | float     | Factor by which ds90 is multiplied for roughness height [-]
+n                   | {n}                 | float     | Factor by which ds90 is multiplied for active layer thickness [-]
+r                   | {r}                 | float     | Coefficient in manning-strickler relation [-]
+R                   | {R}                 | float     | Submerged specific gravity of gravel [-]
+l                   | {l}                 | float     | Bed porosity, gravel [-]
+u                   | {u}                 | float     | Upwinding coefficient for load spatial derivatives in exner equation (>0.5 suggested) [-]
+a                   | {a}                 | float     | Coefficient for material transferred to substrate as bed aggrades [-]
+O                   | {O}                 | float     | Channel sinuosity [-]
+s                   | {s}                 | float     | subsidence rate [mm/year]
+B                   | {B}                 | float     | Ratio of depositional width to channel width [-]
+V                   | {V}                 | float     | Ratio of wash load deposited per unit bed material load deposited [-]
+C                   | {C}                 | float     | Coefficient, cf, in the chezy formulation [-]

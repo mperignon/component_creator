@@ -1,0 +1,56 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "bed surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Sl", 
+        "name": "Sl", 
+        "description": "bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "qbT", 
+        "name": "qbT", 
+        "description": "volume bedload transport per unit width", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "Bbf", 
+        "name": "Bbf", 
+        "description": "bankfull channel width", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Hbf", 
+        "name": "Hbf", 
+        "description": "bankfull water depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

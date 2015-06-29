@@ -1,0 +1,83 @@
+[
+    {
+        "key": "xhat", 
+        "name": "xhat", 
+        "description": "dimensionless downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "[km]"
+        }
+    }, 
+    {
+        "key": "Qtbf", 
+        "name": "Qtbf", 
+        "description": "Volume bed material transport during flood stage", 
+        "value": {
+            "type": "float", 
+            "units": "[m3/s]"
+        }
+    }, 
+    {
+        "key": "Sl", 
+        "name": "Sl", 
+        "description": "Bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "\u03b7hat", 
+        "name": "\u03b7hat", 
+        "description": "dimensionless deviatoric bed elevation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "\u03b7dev", 
+        "name": "\u03b7dev", 
+        "description": "deviatoric bed elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Bbf", 
+        "name": "Bbf", 
+        "description": "Bankfull channel width", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Hbf", 
+        "name": "Hbf", 
+        "description": "Bankfull channel depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "Bed elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

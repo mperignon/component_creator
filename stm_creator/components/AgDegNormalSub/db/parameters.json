@@ -1,0 +1,218 @@
+[
+    {
+        "key": "q", 
+        "name": "q", 
+        "description": "Water Discharge per unit Width During Flood", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "Intermittency", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Grain Size", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "l", 
+        "name": "l", 
+        "description": "Bed Porosity", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "k", 
+        "name": "k", 
+        "description": "Roughness height", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Ambient Bed Slope", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Volume Sediment Feed Rate Per Unit Width", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Length of Reach", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time Step", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Number of Time Steps per Printout", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of Printouts desired", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Intervals", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u", 
+        "name": "u", 
+        "description": "upwinding coefficient [1=full upwind, 0.5=central difference]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "r", 
+        "name": "r", 
+        "description": "Coefficient in Manning-Strickler Resistance Relation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "Coefficient in Sediment Transport Relation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "Exponent in Sediment Transport Relation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "Critical Shields Stress", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "P", 
+        "name": "P", 
+        "description": "Fraction of Bed Shear Stress that is a Skin Friction", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged Specific Gravity of Sediment", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Coefficient, Cf, for Chezy formulation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "s", 
+        "name": "s", 
+        "description": "Subsidence rate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "Ratio of Depositional Width to Channel Width", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "O", 
+        "name": "O", 
+        "description": "Channel Sinousity", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Y", 
+        "name": "Y", 
+        "description": "Unit Wash Load Deposited in Channel-Floodplain per Unit Bed Material Load", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

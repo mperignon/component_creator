@@ -1,0 +1,14 @@
+{
+  "id": "AgDegNormalGravMixHyd", 
+  "name": "AgDegNormalGravMixHyd", 
+  "class": "AgDegNormalGravMixHyd", 
+  "initialize_args": "AgDegNormalGravMixHyd.cfg", 
+  "time_step": "", 
+  "summary": "This program is a close relative of AgDegNormGravMixPW. It computes aggradation and degradation in gravel-bed river subject to a repeated hydrograph. The sediment is modeled as mixture of different grain sizes and the bedload formulation is that of Parker (1990) that was derived to compute the transport of gravel only.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:AgDegNormalGravMixHyd", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

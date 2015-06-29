@@ -1,0 +1,30 @@
+#===============================================================================
+# STM Config File for: DredgeSlotBW
+#===============================================================================
+# Input
+Q                   | {Q}                 | float     | Flow discharge [m^3/s]
+I                   | {I}                 | float     | Flood intermittency [-]
+B                   | {B}                 | float     | Channel width [m]
+d                   | {d}                 | float     | Median grain size (sand) [mm]
+D                   | {D}                 | float     | Grain size such that 90% is finer (sand) [mm]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+S                   | {S}                 | float     | Bed slope [-]
+L                   | {L}                 | float     | Reach length [m]
+H                   | {H}                 | float     | Depth of dredge slot [m]
+u                   | {u}                 | float     | Fraction of reach length defining upstream end of dredge slot [-]
+r                   | {r}                 | float     | Fraction of reach length defining downstream end of dredge slot [-]
+l                   | {l}                 | float     | Bed porosity [-]
+a                   | {a}                 | float     | Upwinding coefficient (1 = full upwinding) [-]
+M                   | {M}                 | float     | Number of spatial steps desired (no more than 2000) [-]
+t                   | {t}                 | float     | Time step [year]
+i                   | {i}                 | float     | Number of iterations per print statement [-]
+p                   | {p}                 | float     | Number of prints desired [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate (m) [-]
+eta                 | {eta}               | float     | Bed elevation (m) [-]
+qb                  | {qb}                | float     | Volume bedload transport per unit width (tons/annum) [-]
+qs                  | {qs}                | float     | Volume bedload transport per unit width due to skin friction (tons/annum) [-]
+H                   | {H}                 | float     | Water depth (m) [-]
+Hs                  | {Hs}                | float     | Water depth due to skin friction (m) [-]
+ksi                 | {ksi}               | float     | Water surface elevation (m) [-]

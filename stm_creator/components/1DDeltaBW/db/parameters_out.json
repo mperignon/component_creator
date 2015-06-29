@@ -1,0 +1,101 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "bed surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "sss", 
+        "name": "sss", 
+        "description": "reach of the alluvium top", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "sbb", 
+        "name": "sbb", 
+        "description": "reach of the alluvium bottom", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "etaup", 
+        "name": "etaup", 
+        "description": "upstream bed surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "etatop", 
+        "name": "etatop", 
+        "description": "bed surface elevation of the top of the foreset", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "etabottom", 
+        "name": "etabottom", 
+        "description": "bed surface elevation of the bottom of the foreset", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Sl", 
+        "name": "Sl", 
+        "description": "bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "qb", 
+        "name": "qb", 
+        "description": "volume bedload transport per unit width", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "tau", 
+        "name": "tau", 
+        "description": "shear stress", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m^2]"
+        }
+    }
+]

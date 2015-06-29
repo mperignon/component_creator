@@ -1,0 +1,110 @@
+[
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Bankfull water discharge at flood", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Reach length", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "s", 
+        "name": "s", 
+        "description": "Initial position of gravel-sand transition", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "k", 
+        "name": "k", 
+        "description": "Initial water surface base level", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "Rate of base level rise [mm/year]", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Subsidence rate [mm/year]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "y", 
+        "name": "y", 
+        "description": "Year of start of sea level rise", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "Y", 
+        "name": "Y", 
+        "description": "Year of stop of sea level rise", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time step", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of prints desired", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Number of iterations per print", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

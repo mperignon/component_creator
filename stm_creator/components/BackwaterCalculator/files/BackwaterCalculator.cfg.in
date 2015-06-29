@@ -1,0 +1,23 @@
+#===============================================================================
+# STM Config File for: BackwaterCalculator
+#===============================================================================
+# Input
+S                   | {S}                 | float     | Slope [m/m]
+C                   | {C}                 | float     | Chezy coefficient [-]
+q                   | {q}                 | float     | Water discharge/width [m^2/s]
+R                   | {R}                 | float     | Hydraulic radius [m]
+M                   | {M}                 | float     | Mean diameter [mm]
+D                   | {D}                 | float     | D90 of the surface [mm]
+n                   | {n}                 | float     | Roughness coefficient [-]
+a                   | {a}                 | float     | Alpha(r) [-]
+x                   | {x}                 | float     | Starting point [m]
+d                   | {d}                 | float     | Step size [m]
+H                   | {H}                 | float     | Initial depth [m]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+H                   | {H}                 | float     | Water depth above bed surface [m]
+U                   | {U}                 | float     | Flow velocity [m/s]
+Fr                  | {Fr}                | float     | Froude number [-]
+eta                 | {eta}               | float     | Bed surface elevation [m]
+ksi                 | {ksi}               | float     | Water surface elevation [m]

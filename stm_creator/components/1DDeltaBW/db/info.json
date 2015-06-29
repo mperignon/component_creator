@@ -1,0 +1,14 @@
+{
+  "id": "1DDeltaBW", 
+  "name": "1DDeltaBW", 
+  "class": "1DDeltaBW", 
+  "initialize_args": "1DDeltaBW.cfg", 
+  "time_step": "", 
+  "summary": "This program calculates bed surface evolution for a narrowly channelized1D fan-delta prograding into standing water using a backwater formulation, as well as calculating the final water surface of the system and the mass balance of sediment in the system.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:DeltaBW", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

@@ -1,0 +1,83 @@
+[
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "submerges specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "d", 
+        "name": "d", 
+        "description": "median sediment size (D50)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "90% passing sediment size (D90)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "factor such that ks = n*D90", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "low end value of Hs", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "s", 
+        "name": "s", 
+        "description": "step size for Hs", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "N", 
+        "name": "N", 
+        "description": "number of steps to make for Hs", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "factor for stratification (if not included, it will be assumed to equal 1)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

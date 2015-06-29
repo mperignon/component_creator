@@ -1,0 +1,236 @@
+[
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Flood Discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "q", 
+        "name": "q", 
+        "description": "Upstream bed material sediment feed rate during floods", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "V", 
+        "name": "V", 
+        "description": "Units of wash load deposited in the fan per unit bed material load deposited", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "Intermittency", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Grain size of bed material", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Reach length (downchannel distance)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "Floodplain width", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "O", 
+        "name": "O", 
+        "description": "Channel sinuosity", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "l", 
+        "name": "l", 
+        "description": "Bed porosity", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Chezy resistance coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Initial fluvial bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "e", 
+        "name": "e", 
+        "description": "Rate of rise of downstream base level (+) [mm/year]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Number of intervals", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of prints desired", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Number of iterations per print", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time step", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "y", 
+        "name": "y", 
+        "description": "Year base level change starts", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Y", 
+        "name": "Y", 
+        "description": "Year base level change stops", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "Coefficient in the Engelund-Hansen 1967 load relation [SANDS, D < 2]", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "Exponent in the Engelund-Hansen 1967 load relation [SANDS, D < 2]", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "Channel-forming Shields number for sand-bed streams [SANDS, D < 2]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "P", 
+        "name": "P", 
+        "description": "Coefficient in the Parker 1979 load relation [GRAVELS, D \u2265 2]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "N", 
+        "name": "N", 
+        "description": "Exponent in the Parker 1979 load relation [GRAVELS, D \u2265 2]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "c", 
+        "name": "c", 
+        "description": "Critical Shields number [GRAVELS, D \u2265 2]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "G", 
+        "name": "G", 
+        "description": "Channel-forming number for gravel-bed streams [GRAVELS, D \u2265 2]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

@@ -1,0 +1,155 @@
+[
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Flow discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "Flood intermittency", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "Channel width", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "d", 
+        "name": "d", 
+        "description": "Median grain size (sand)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Grain size such that 90% is finer (sand)", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged Specific Gravity of Sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Reach length", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "Depth of dredge slot", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u", 
+        "name": "u", 
+        "description": "Fraction of reach length defining upstream end of dredge slot", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "r", 
+        "name": "r", 
+        "description": "Fraction of reach length defining downstream end of dredge slot", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "l", 
+        "name": "l", 
+        "description": "Bed porosity", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "Upwinding coefficient (1 = full upwinding)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Number of spatial steps desired (no more than 2000)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time step", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Number of iterations per print statement", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of prints desired", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

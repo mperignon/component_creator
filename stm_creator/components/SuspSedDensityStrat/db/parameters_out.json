@@ -1,0 +1,65 @@
+[
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "zeta", 
+        "name": "zeta", 
+        "description": "height above bed surface relative to the water surface height", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "uno", 
+        "name": "uno", 
+        "description": "normalized velocity without stratification", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "cno", 
+        "name": "cno", 
+        "description": "normalized concentration without stratification", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "un", 
+        "name": "un", 
+        "description": "normalized velocity with stratification", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "cn", 
+        "name": "cn", 
+        "description": "normalized concentration with stratification", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Ri", 
+        "name": "Ri", 
+        "description": "gradient Richardson number", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

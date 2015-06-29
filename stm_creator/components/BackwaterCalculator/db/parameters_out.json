@@ -1,0 +1,65 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth above bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "U", 
+        "name": "U", 
+        "description": "flow velocity", 
+        "value": {
+            "type": "float", 
+            "units": "[m/s]"
+        }
+    }, 
+    {
+        "key": "Fr", 
+        "name": "Fr", 
+        "description": "Froude number", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "tau(b)", 
+        "name": "tau(b)", 
+        "description": "shear stress on the bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "bed surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "ksi", 
+        "name": "ksi", 
+        "description": "water surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

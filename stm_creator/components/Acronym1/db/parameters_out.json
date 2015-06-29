@@ -1,0 +1,47 @@
+[
+    {
+        "key": "qbT", 
+        "name": "qbT", 
+        "description": "volume beload transport per unit width", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "taug", 
+        "name": "taug", 
+        "description": "shields number", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Dg", 
+        "name": "Dg", 
+        "description": "geometric mean", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "sigmag", 
+        "name": "sigmag", 
+        "description": "geometric standard deviation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Dx", 
+        "name": "Dx", 
+        "description": "diameter such that x% of the distribution is finer", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }
+]

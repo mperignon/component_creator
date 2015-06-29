@@ -1,0 +1,65 @@
+[
+    {
+        "key": "b", 
+        "name": "b", 
+        "description": "height above the bed surface for the initial value", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "z", 
+        "name": "z", 
+        "description": "height above the bed surface of various points", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u*", 
+        "name": "u*", 
+        "description": "shear velocity", 
+        "value": {
+            "type": "float", 
+            "units": "[m/s]"
+        }
+    }, 
+    {
+        "key": "vs", 
+        "name": "vs", 
+        "description": "settling velocity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[cm/s]"
+        }
+    }, 
+    {
+        "key": "cb", 
+        "name": "cb", 
+        "description": "concentration of sediment at b point", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "c", 
+        "name": "c", 
+        "description": "concentration of sediment at generic point", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

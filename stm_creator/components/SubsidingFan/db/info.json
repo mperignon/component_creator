@@ -1,0 +1,14 @@
+{
+  "id": "SubsidingFan", 
+  "name": "SubsidingFan", 
+  "class": "SubsidingFan", 
+  "initialize_args": "SubsidingFan.cfg", 
+  "time_step": "", 
+  "summary": "This model is the calculation of Sediment Deposition in a Fan-Shaped Basin, undergoing Piston-Style Subsidence.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:SubsidingFan", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

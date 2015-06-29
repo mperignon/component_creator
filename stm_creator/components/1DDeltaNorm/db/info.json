@@ -1,0 +1,14 @@
+{
+  "id": "1DDeltaNorm", 
+  "name": "1DDeltaNorm", 
+  "class": "1DDeltaNorm", 
+  "initialize_args": "1DDeltaNorm.cfg", 
+  "time_step": "", 
+  "summary": "This program calculates the bed surface evolution for a narrowly channelized 1D fan-delta prograding into standing water, as well as calculating the initial and final amounts of sediment in the system.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:DeltaNorm", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

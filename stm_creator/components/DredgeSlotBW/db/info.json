@@ -1,0 +1,14 @@
+{
+  "id": "DredgeSlotBW", 
+  "name": "DredgeSlotBW", 
+  "class": "DredgeSlotBW", 
+  "initialize_args": "DredgeSlotBW.cfg", 
+  "time_step": "", 
+  "summary": "This model is a calculator for aggradation and degradation of sediment mixtures in gravel-bed streams subject to cyclic hydrographs.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:DredgeSlotBW", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

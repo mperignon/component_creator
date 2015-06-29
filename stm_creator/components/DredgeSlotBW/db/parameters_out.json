@@ -1,0 +1,65 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate (m)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "bed elevation (m)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "qb", 
+        "name": "qb", 
+        "description": "volume bedload transport per unit width (tons/annum)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "qs", 
+        "name": "qs", 
+        "description": "volume bedload transport per unit width due to skin friction (tons/annum)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth (m)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Hs", 
+        "name": "Hs", 
+        "description": "water depth due to skin friction (m)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "ksi", 
+        "name": "ksi", 
+        "description": "water surface elevation (m)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

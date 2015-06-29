@@ -1,0 +1,38 @@
+[
+    {
+        "key": "v", 
+        "name": "v", 
+        "description": "kinematic viscosity of water", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "submerged specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "grain size", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "g", 
+        "name": "g", 
+        "description": "acceleration due to gravity", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

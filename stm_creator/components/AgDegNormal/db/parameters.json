@@ -1,0 +1,191 @@
+[
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Flood discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "Intermittency", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "Channel Width", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Grain Size", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "l", 
+        "name": "l", 
+        "description": "Bed Porosity", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "k", 
+        "name": "k", 
+        "description": "Roughness height", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Ambient Bed Slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "G", 
+        "name": "G", 
+        "description": "Imposed Annual Sediment Transfer Rate from Upstream [tons/annum]", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Length of Reach", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time Step", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Number of Time Steps per Printout", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of Printouts desired", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Intervals", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u", 
+        "name": "u", 
+        "description": "Upwinding Coefficient [1=full upwind, 0.5=central difference]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "r", 
+        "name": "r", 
+        "description": "Coefficient in Manning-Strickler Resistance Relation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "Coefficient in Sediment Transport Relation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "Exponent in Sediment Transport Relation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "Critical Shields Stress", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "P", 
+        "name": "P", 
+        "description": "Fraction of Bed Shear Stress that is a Skin Friction", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged Specific Gravity of Sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Coefficient, Cf, for Chezy formulation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

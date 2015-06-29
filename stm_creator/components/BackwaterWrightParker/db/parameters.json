@@ -1,0 +1,83 @@
+[
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "flow discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "channel width", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "d", 
+        "name": "d", 
+        "description": "median grain size (D50)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "grain size such that 90% passes (D90)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "submerges specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "k", 
+        "name": "k", 
+        "description": "downstream water surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "reach length", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "number of spatial nodes (max of 99)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

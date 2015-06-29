@@ -1,0 +1,14 @@
+{
+  "id": "FallVelocity", 
+  "name": "FallVelocity", 
+  "class": "FallVelocity", 
+  "initialize_args": "FallVelocity.cfg", 
+  "time_step": "", 
+  "summary": "This model calculate fall velocity for spheres. Uses formulation of Dietrich (1982).", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:FallVelocity", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

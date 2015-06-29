@@ -1,0 +1,14 @@
+{
+  "id": "BackwaterWrightParker", 
+  "name": "BackwaterWrightParker", 
+  "class": "BackwaterWrightParker", 
+  "initialize_args": "BackwaterWrightParker.cfg", 
+  "time_step": "", 
+  "summary": "This program calculates backwater curves over a sand-bed stream with a specified spatially constant bed slope S. The calculation uses the hydraulic resistance formulation of Wright and Parker (2004) (without the flow stratification correction), as well as calculating the normal depth.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:BackwaterWrightParker", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

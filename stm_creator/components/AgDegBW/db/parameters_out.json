@@ -1,0 +1,56 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "bed surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Sl", 
+        "name": "Sl", 
+        "description": "slope of the bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "tau", 
+        "name": "tau", 
+        "description": "shear stress on bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "qb", 
+        "name": "qb", 
+        "description": "bed material load [tons/year]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

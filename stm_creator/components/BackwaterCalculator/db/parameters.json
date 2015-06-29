@@ -1,0 +1,101 @@
+[
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Slope", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Chezy coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "q", 
+        "name": "q", 
+        "description": "water discharge/width", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "hydraulic radius", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Mean diameter", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "D90 of the surface", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "roughness coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "alpha(r)", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "starting point", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "d", 
+        "name": "d", 
+        "description": "step size", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "initial depth", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }
+]

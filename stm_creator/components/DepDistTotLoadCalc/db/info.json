@@ -1,0 +1,14 @@
+{
+  "id": "DepDistTotLoadCalc", 
+  "name": "DepDistTotLoadCalc", 
+  "class": "DepDistTotLoadCalc", 
+  "initialize_args": "DepDistTotLoadCalc.cfg", 
+  "time_step": "", 
+  "summary": "This is an illustration of calculation of depth-discharge relation, bed load transport, suspended load transport and total bed material load for a large, low-slope sand-bed river.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:DepDistTotLoadCalc", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

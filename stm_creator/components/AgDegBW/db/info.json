@@ -1,0 +1,14 @@
+{
+  "id": "AgDegBW", 
+  "name": "AgDegBW", 
+  "class": "AgDegBW", 
+  "initialize_args": "AgDegBW.cfg", 
+  "time_step": "", 
+  "summary": "It is the Calculator for aggradation and degradation of a river reach using a backwater formulation. This program computes 1D bed variation in rivers due to differential sediment transport. The sediment is assumed to be uniform with size D. All sediment transport is assumed to occur in a specified fraction of time during which the river is in flood, specified by an intermittency. A Manning-Strickler relation is used for bed resistance. A generic Meyer-Peter Muller relation is used for sediment transport. The flow is computed using a backwater formulation for gradually varied flow.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:AgDegBW", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

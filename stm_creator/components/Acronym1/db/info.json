@@ -1,0 +1,14 @@
+{
+  "id": "Acronym1", 
+  "name": "Acronym1", 
+  "class": "Acronym1", 
+  "initialize_args": "Acronym1.cfg", 
+  "time_step": "", 
+  "summary": "This program calculates the volume bedload transport per unit width and the Shields number, based on the surface geometric mean diameter and the bedload GSD with its various derivatives (mean, stand. dev., interpolations), given the surface GSD.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:Acronym1", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

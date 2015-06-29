@@ -1,0 +1,14 @@
+{
+  "id": "AgDegNormGravMixSubPW", 
+  "name": "AgDegNormGravMixSubPW", 
+  "class": "AgDegNormGravMixSubPW", 
+  "initialize_args": "AgDegNormGravMixSubPW.cfg", 
+  "time_step": "", 
+  "summary": "This program calculates the bed surface evolution for a river of constant width with a mixture of gravel sizes with a load computed either by the Parker relation or the Wilcock-Crowe relation, as in the case of AgDegNormGravMixPW, but this program also takes into effect the subsidence.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:AgDegNormGravMixSubPW", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

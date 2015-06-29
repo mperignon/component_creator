@@ -1,0 +1,14 @@
+{
+  "id": "Acronym1R", 
+  "name": "Acronym1R", 
+  "class": "Acronym1R", 
+  "initialize_args": "Acronym1R.cfg", 
+  "time_step": "", 
+  "summary": "Acronym1_R is used for computing the volume bedload transport rate per unit width and bedload grain size distribution from a specified surface grain size distribution (with sand removed) (Db,i, Ff,i), i = 1..N+1, a specific gravity of the sediment (here equal to R + 1), a water discharge Q, a channel width B and a streamwise bed slope S.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:Acronym1R", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

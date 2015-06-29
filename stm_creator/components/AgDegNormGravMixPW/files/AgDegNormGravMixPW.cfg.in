@@ -1,0 +1,35 @@
+#===============================================================================
+# STM Config File for: AgDegNormGravMixPW
+#===============================================================================
+# Input
+q                   | {q}                 | float     | Water discharge/width [m^2/s]
+T                   | {T}                 | float     | Gravel input [m^2/s]
+I                   | {I}                 | float     | Intermittency [-]
+e                   | {e}                 | float     | Base level [m]
+S                   | {S}                 | float     | Initial bed slope [-]
+L                   | {L}                 | float     | Reach length [m]
+t                   | {t}                 | float     | Time step [days]
+M                   | {M}                 | float     | No. of intervals (100 or less) [-]
+p                   | {p}                 | float     | No. of prints [-]
+i                   | {i}                 | float     | No. of iterations per print [-]
+k                   | {k}                 | float     | Factor by which ds90 is multiplied for roughness height [-]
+n                   | {n}                 | float     | Factor by which ds90 is multiplied for active layer thickness [-]
+r                   | {r}                 | float     | Coefficient in manning-strickler relation [-]
+R                   | {R}                 | float     | Submerged specific gravity of gravel [-]
+l                   | {l}                 | float     | Bed porosity, gravel [-]
+u                   | {u}                 | float     | Upwinding coefficient for load spatial derivatives in exner equation (>0.5 suggested) [-]
+a                   | {a}                 | float     | Coefficient for material transferred to substrate as bed aggrades [-]
+C                   | {C}                 | float     | Coefficient, cf, in the chezy formulation [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+Sl                  | {Sl}                | float     | Slope of the bed surface [-]
+H                   | {H}                 | float     | Water depth [m]
+eta                 | {eta}               | float     | Bed surface elevation [m]
+qbT                 | {qbT}               | float     | Bedload transport rate [m2/s]
+qbf                 | {qbf}               | float     | Upstream feed rate [tons/year]
+dsg                 | {dsg}               | float     | Geometric mean grain size on the bed surface [mm]
+d90s                | {d90s}              | float     | The diameter such that 90% of the bed surface is finer [mm]
+pfeed               | {pfeed}             | float     |    gsd of the feed [-]
+Ffs                 | {Ffs}               | float     | Gsd of the substrate [-]
+Ff                  | {Ff}                | float     | Gsd of the final surface [-]

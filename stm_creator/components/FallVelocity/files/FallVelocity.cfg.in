@@ -1,0 +1,8 @@
+#===============================================================================
+# STM Config File for: FallVelocity
+#===============================================================================
+# Input
+v                   | {v}                 | float     | Kinematic viscosity of water [m^2/s]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+D                   | {D}                 | float     | Grain size [mm]
+g                   | {g}                 | float     | Acceleration due to gravity [m/s^2]

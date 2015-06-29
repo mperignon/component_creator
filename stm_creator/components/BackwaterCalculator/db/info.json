@@ -1,0 +1,14 @@
+{
+  "id": "BackwaterCalculator", 
+  "name": "BackwaterCalculator", 
+  "class": "BackwaterCalculator", 
+  "initialize_args": "BackwaterCalculator.cfg", 
+  "time_step": "", 
+  "summary": "The program solves the backwater equation for subcritical flow with a predictor – corrector scheme.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:BackwaterCalculator", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

@@ -1,0 +1,37 @@
+#===============================================================================
+# STM Config File for: DepDistTotLoadCalc
+#===============================================================================
+# Input
+S                   | {S}                 | float     | Bed slope [-]
+R                   | {R}                 | float     | Submerges specific gravity of sediment [-]
+d                   | {d}                 | float     | Median sediment size (d50) [mm]
+D                   | {D}                 | float     | 90% passing sediment size (d90) [mm]
+n                   | {n}                 | float     | Factor such that ks = n*d90 [-]
+H                   | {H}                 | float     | Low end value of hs [m]
+s                   | {s}                 | float     | Step size for hs [m]
+N                   | {N}                 | float     | Number of steps to make for hs [-]
+a                   | {a}                 | float     | Factor for stratification (if not included, it will be assumed to equal 1) [-]
+v                   | {v}                 | float     | Kinematic viscosity of water [m^2/s]
+#===============================================================================
+# Output
+Hs                  | {Hs}                | float     | Water depth due to the skin friction [m]
+tausg               | {tausg}             | float     | Shields stress due to skin friction [n/m2]
+U                   | {U}                 | float     | Flow velocity [m/s]
+Gamma               | {Gamma}             | float     | Parameter with no physical meaning [used in calculations of h]
+H                   | {H}                 | float     | Actual water depth [m]
+qw                  | {qw}                | float     | Flow rate [m2/s]
+tau                 | {tau}               | float     | Actual shields stress [n/m2]
+ratio               | {ratio}             | float     | Tausg/tau [-]
+Fr                  | {Fr}                | float     | Froude number [-]
+u*                  | {u*}                | float     | Shear velocity [m/s]
+u*s                 | {u*s}               | float     | Shear velocity due to skin friction [m/s]
+qb                  | {qb}                | float     | Bedload transport rate [m2/s]
+Cz                  | {Cz}                | float     | Chézy coefficient [-]
+kc                  | {kc}                | float     | Composite roughness [mm]
+Zu                  | {Zu}                | float     | Parameter has no physical meaning [used in other calculations]
+E                   | {E}                 | float     | Entrainment [-]
+I                   | {I}                 | float     | Results of the integral [-]
+qs                  | {qs}                | float     | Volume suspended bed material load per unit width [m2/s]
+qt                  | {qt}                | float     | Total volume bedload and suspended bed material loads per unit width [m2/s]
+qb/qt               | {qb/qt}             | float     | Ratio of bedload volume to total bedload material volume [-]
+vs/ku               | {vs/ku}             | float     | Exponent in the formulation [-]

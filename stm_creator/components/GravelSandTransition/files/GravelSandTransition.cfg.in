@@ -1,0 +1,25 @@
+#===============================================================================
+# STM Config File for: GravelSandTransition
+#===============================================================================
+# Input
+Q                   | {Q}                 | float     | Bankfull water discharge at flood [m^3/s]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+L                   | {L}                 | float     | Reach length [m]
+s                   | {s}                 | float     | Initial position of gravel-sand transition [m]
+k                   | {k}                 | float     | Initial water surface base level [m]
+x                   | {x}                 | float     | Rate of base level rise [mm/year]
+S                   | {S}                 | float     | Subsidence rate [mm/year]
+y                   | {y}                 | float     | Year of start of sea level rise [year]
+Y                   | {Y}                 | float     | Year of stop of sea level rise [year]
+t                   | {t}                 | float     | Time step [year]
+p                   | {p}                 | float     | Number of prints desired [-]
+i                   | {i}                 | float     | Number of iterations per print [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+eta                 | {eta}               | float     | Bed elevation [m]
+Sl                  | {Sl}                | float     | Bed slope [-]
+qb                  | {qb}                | float     | Volume bedload transport per unit width [m2/s]
+H                   | {H}                 | float     | Water depth [m]
+tau                 | {tau}               | float     | Shear stress [n/m2]
+sgs                 | {sgs}               | float     | Location of the gravel-sand transition [m]

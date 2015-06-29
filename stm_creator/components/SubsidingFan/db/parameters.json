@@ -1,0 +1,209 @@
+[
+    {
+        "key": "q", 
+        "name": "q", 
+        "description": "Upstream bed material sediment feed rate during floods", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Basin Length", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Flood discharge", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Grain size of bed", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "V", 
+        "name": "V", 
+        "description": "Units of wash load deposited in the fan per unit bed material load", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "Fan angle [degrees]", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "l", 
+        "name": "l", 
+        "description": "Bed porosity", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "Intermittency", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Chezy Resistance Coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "O", 
+        "name": "O", 
+        "description": "Channel Sinuosity", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "s", 
+        "name": "s", 
+        "description": "Subsidence rate (must equal mean aggradation for perfect filling of hole; otherwise overfilled or underfilled)", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "Engelund-Hansen coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "Engelund-Hansen exponent", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Channel-forming Shields number", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "P", 
+        "name": "P", 
+        "description": "Parker coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "N", 
+        "name": "N", 
+        "description": "Parker exponent", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "c", 
+        "name": "c", 
+        "description": "Critical Shields number", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "G", 
+        "name": "G", 
+        "description": "Channel-forming Shields number", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Number of spatial intervals", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time step", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Number of iterations desired", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of printouts desired", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

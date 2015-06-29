@@ -1,0 +1,14 @@
+{
+  "id": "GSDCalculator", 
+  "name": "GSDCalculator", 
+  "class": "GSDCalculator", 
+  "initialize_args": "GSDCalculator.cfg", 
+  "time_step": "", 
+  "summary": "This model is used to calculate statistical characteristics of grain size distributions. Given a grain size distribution, the program computes the geometric mean diameter, and the geometric standard deviation.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:GSDCalculator", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

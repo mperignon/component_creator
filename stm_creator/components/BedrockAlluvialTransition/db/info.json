@@ -1,0 +1,14 @@
+{
+  "id": "BedrockAlluvialTransition", 
+  "name": "BedrockAlluvialTransition", 
+  "class": "BedrockAlluvialTransition", 
+  "initialize_args": "BedrockAlluvialTransition.cfg", 
+  "time_step": "", 
+  "summary": "This program calculates the bed surface evolution at predefined nodes relative to moving boundary nodes for a transition from bedrock to alluvium.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:BedrockAlluvialTransition", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

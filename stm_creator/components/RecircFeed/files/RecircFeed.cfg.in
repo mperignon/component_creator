@@ -1,0 +1,22 @@
+#===============================================================================
+# STM Config File for: RecircFeed
+#===============================================================================
+# Input
+F                   | {F}                 | float     | Equilibrium froude number (must be < 1) [-]
+n                   | {n}                 | float     | Exponent in load relation [-]
+f                   | {f}                 | float     | Backwater number [-]
+e                   | {e}                 | float     | Initial dimensionless mean bed elevation [-]
+T                   | {T}                 | float     | Ratio of normal to critical shields stress [-]
+S                   | {S}                 | float     | Initial normalized slope [-]
+M                   | {M}                 | float     | Number of spatial intervals desired [-]
+t                   | {t}                 | float     | Dimensionless time step [-]
+p                   | {p}                 | float     | Number of prints desired [-]
+i                   | {i}                 | float     | Number of iterations desired [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Dimensionless downstream coordinate [-]
+eta                 | {eta}               | float     | Dimensionless bed elevation [-]
+Sl                  | {Sl}                | float     | Bed slope [-]
+qbT                 | {qbT}               | float     | Dimensionless bedload transport [-]
+H                   | {H}                 | float     | Dimensionless water depth [-]
+SNup                | {SNup}              | float     | Upstream end normalized slope [-]

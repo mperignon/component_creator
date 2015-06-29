@@ -1,0 +1,14 @@
+{
+  "id": "WPHydResAMBL", 
+  "name": "WPHydResAMBL", 
+  "class": "WPHydResAMBL", 
+  "initialize_args": "WPHydResAMBL.cfg", 
+  "time_step": "", 
+  "summary": "This model is a Depth-Discharge and Bedload Calculator. It is an implementation of the Wright-Parker (2004) formulation for hydraulic resistance combined with the Ashida-Michiue (1972) bedload formulation.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:WPHydResAMBL", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

@@ -1,0 +1,155 @@
+[
+    {
+        "key": "G", 
+        "name": "G", 
+        "description": "Mean annual bed material sediment feed rate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Reach length (downchannel distance)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "Rate of sea level rise", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Bankfull water discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "Floodplain width", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Grain size", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "V", 
+        "name": "V", 
+        "description": "Fraction wash load deposited per unit bed material deposited", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "Channel-forming Shields number", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "Coefficient in Engelund-Hansen bed material load relation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "l", 
+        "name": "l", 
+        "description": "Bed porosity", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "Flood intermittence", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Chezy resistance coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "O", 
+        "name": "O", 
+        "description": "Channel sinuosity", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "X", 
+        "name": "X", 
+        "description": "Initial water surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time interval for plotting", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of prints desired", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

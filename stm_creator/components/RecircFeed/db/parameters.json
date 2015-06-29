@@ -1,0 +1,92 @@
+[
+    {
+        "key": "F", 
+        "name": "F", 
+        "description": "Equilibrium Froude number (must be < 1)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "Exponent in load relation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "f", 
+        "name": "f", 
+        "description": "Backwater number", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "e", 
+        "name": "e", 
+        "description": "Initial dimensionless mean bed elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "Ratio of normal to critical Shields stress", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Initial normalized slope", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Number of spatial intervals desired", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Dimensionless time step", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of prints desired", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Number of iterations desired", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }
+]

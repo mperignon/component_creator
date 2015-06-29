@@ -1,0 +1,13 @@
+#===============================================================================
+# STM Config File for: Acronym1
+#===============================================================================
+# Input
+R                   | {R}                 | float     | Sediment specific gravity, r+1 [-]
+u                   | {u}                 | float     | Shear velocity of flow [m/s]
+#===============================================================================
+# Output
+qbT                 | {qbT}               | float     | Volume beload transport per unit width [m2/s]
+taug                | {taug}              | float     | Shields number [-]
+Dg                  | {Dg}                | float     | Geometric mean [mm]
+sigmag              | {sigmag}            | float     | Geometric standard deviation [-]
+Dx                  | {Dx}                | float     | Diameter such that x% of the distribution is finer [mm]

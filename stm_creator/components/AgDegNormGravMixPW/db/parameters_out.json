@@ -1,0 +1,110 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Sl", 
+        "name": "Sl", 
+        "description": "slope of the bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "tausg", 
+        "name": "tausg", 
+        "description": "shear stress on the bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "bed surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "qbT", 
+        "name": "qbT", 
+        "description": "bedload transport rate", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "qbf", 
+        "name": "qbf", 
+        "description": "upstream feed rate [tons/year]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "dsg", 
+        "name": "dsg", 
+        "description": "geometric mean grain size on the bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "d90s", 
+        "name": "d90s", 
+        "description": "the diameter such that 90% of the bed surface is finer", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "pfeed", 
+        "name": "pfeed", 
+        "description": "   GSD of the feed", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Ffs", 
+        "name": "Ffs", 
+        "description": "GSD of the substrate", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Ff", 
+        "name": "Ff", 
+        "description": "GSD of the final surface", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

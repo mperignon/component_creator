@@ -1,0 +1,36 @@
+#===============================================================================
+# STM Config File for: AgDegNormalSub
+#===============================================================================
+# Input
+q                   | {q}                 | float     | Water discharge per unit width during flood [m^2/s]
+I                   | {I}                 | float     | Intermittency [-]
+D                   | {D}                 | float     | Grain size [mm]
+l                   | {l}                 | float     | Bed porosity [-]
+k                   | {k}                 | float     | Roughness height [mm]
+S                   | {S}                 | float     | Ambient bed slope [-]
+Q                   | {Q}                 | float     | Volume sediment feed rate per unit width [m^2/s]
+L                   | {L}                 | float     | Length of reach [m]
+t                   | {t}                 | float     | Time step [year]
+i                   | {i}                 | float     | Number of time steps per printout [-]
+p                   | {p}                 | float     | Number of printouts desired [-]
+M                   | {M}                 | float     | Intervals [-]
+u                   | {u}                 | float     | Upwinding coefficient [1=full upwind, 0.5=central difference]
+r                   | {r}                 | float     | Coefficient in manning-strickler resistance relation [-]
+a                   | {a}                 | float     | Coefficient in sediment transport relation [-]
+n                   | {n}                 | float     | Exponent in sediment transport relation [-]
+T                   | {T}                 | float     | Critical shields stress [-]
+P                   | {P}                 | float     | Fraction of bed shear stress that is a skin friction [-]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+C                   | {C}                 | float     | Coefficient, cf, for chezy formulation [-]
+s                   | {s}                 | float     | Subsidence rate [mm/yr]
+B                   | {B}                 | float     | Ratio of depositional width to channel width [-]
+O                   | {O}                 | float     | Channel sinousity [-]
+Y                   | {Y}                 | float     | Unit wash load deposited in channel-floodplain per unit bed material load [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+eta                 | {eta}               | float     | Bed surface elevation [m]
+Sl                  | {Sl}                | float     | Slope of the bed surface [-]
+H                   | {H}                 | float     | Water depth [m]
+tau                 | {tau}               | float     | Shear stress on bed surface [n/m2]
+qb                  | {qb}                | float     | Bed material load [m2/s]

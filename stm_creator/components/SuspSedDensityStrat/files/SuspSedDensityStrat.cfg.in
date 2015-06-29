@@ -1,0 +1,20 @@
+#===============================================================================
+# STM Config File for: SuspSedDensityStrat
+#===============================================================================
+# Input
+R                   | {R}                 | float     | Specific gravity of sediment [-]
+D                   | {D}                 | float     | Sediment grain size [mm]
+H                   | {H}                 | float     | Flow depth [m]
+k                   | {k}                 | float     | Composite roughness height (including bedform effects)[mm]
+u                   | {u}                 | float     | Shear velocity [cm/s]
+v                   | {v}                 | float     | Kinematic viscosity of water [cm^2/s]
+C                   | {C}                 | float     | Shear velocity due to skin friction [cm/s] or reference volume concentration
+#===============================================================================
+# Output
+H                   | {H}                 | float     | Water depth [m]
+zeta                | {zeta}              | float     | Height above bed surface relative to the water surface height [-]
+uno                 | {uno}               | float     | Normalized velocity without stratification [-]
+cno                 | {cno}               | float     | Normalized concentration without stratification [-]
+un                  | {un}                | float     | Normalized velocity with stratification [-]
+cn                  | {cn}                | float     | Normalized concentration with stratification [-]
+Ri                  | {Ri}                | float     | Gradient richardson number [-]

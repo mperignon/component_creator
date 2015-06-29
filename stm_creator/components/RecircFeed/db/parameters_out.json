@@ -1,0 +1,65 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "dimensionless downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "dimensionless bed elevation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Sl", 
+        "name": "Sl", 
+        "description": "bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "qbT", 
+        "name": "qbT", 
+        "description": "dimensionless bedload transport", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "dimensionless water depth", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SNup", 
+        "name": "SNup", 
+        "description": "upstream end normalized slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SNdown", 
+        "name": "SNdown", 
+        "description": "downstream end normalized slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

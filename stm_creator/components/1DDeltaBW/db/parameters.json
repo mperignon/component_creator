@@ -1,0 +1,218 @@
+[
+    {
+        "key": "q", 
+        "name": "q", 
+        "description": "Flood Discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "Intermittency", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Upstream bed material sediment feed rate during floods", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "D", 
+        "name": "D", 
+        "description": "Grain size of bed material", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "Chezy resistance coefficient", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "Exponent in the load relation", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "Critical Shields stress in load relation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "E", 
+        "name": "E", 
+        "description": "Elevation of top of the foreset", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "e", 
+        "name": "e", 
+        "description": "Initial elevation of bottom of the foreset", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "Water surface elevation of the lake", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "f", 
+        "name": "f", 
+        "description": "Initial fluvial bedslope", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "b", 
+        "name": "b", 
+        "description": "Subaqueous basement slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "s", 
+        "name": "s", 
+        "description": "Initial length of the fluvial zone", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "m", 
+        "name": "m", 
+        "description": "Maximum length of the fluvial zone", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Slope of foreset face", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Submerged specific gravity of sediment", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "Bed porosity", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "k", 
+        "name": "k", 
+        "description": "Coefficient in Manning-Strickler relation (ks = n * D90)", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "Coefficient in total bed material load relation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "r", 
+        "name": "r", 
+        "description": "Coefficient in Manning-Strickler relation (alpha,r)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "Number of fluvial nodes", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "Time step", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "Number of printouts after initial one", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "Iterations per each printout", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

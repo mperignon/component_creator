@@ -1,0 +1,11 @@
+[
+    {
+        "key": "\t", 
+        "name": "\t", 
+        "description": " (no more than 100 values)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

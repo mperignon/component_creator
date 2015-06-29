@@ -1,0 +1,14 @@
+{
+  "id": "Rouse-VanoniEquilibrium", 
+  "name": "Rouse-VanoniEquilibrium", 
+  "class": "Rouse-VanoniEquilibrium", 
+  "initialize_args": "Rouse-VanoniEquilibrium.cfg", 
+  "time_step": "", 
+  "summary": "This model is working as a profile calculator for Rouse-Vanoni Equilibrium Suspended Sediment.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:RouseVanoniEquilibrium", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

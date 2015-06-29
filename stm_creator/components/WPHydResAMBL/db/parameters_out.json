@@ -1,0 +1,110 @@
+[
+    {
+        "key": "Hs", 
+        "name": "Hs", 
+        "description": "water depth due to the skin friction", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "tausg", 
+        "name": "tausg", 
+        "description": "shields stress due to skin friction", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "U", 
+        "name": "U", 
+        "description": "flow velocity", 
+        "value": {
+            "type": "float", 
+            "units": "[m/s]"
+        }
+    }, 
+    {
+        "key": "Gamma", 
+        "name": "Gamma", 
+        "description": "parameter with no physical meaning [used in calculations of H]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "actual water depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "qw", 
+        "name": "qw", 
+        "description": "flow rate", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "tau", 
+        "name": "tau", 
+        "description": "actual shields stress", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "ratio", 
+        "name": "ratio", 
+        "description": "tausg/tau", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Fr", 
+        "name": "Fr", 
+        "description": "Froude number", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u*", 
+        "name": "u*", 
+        "description": "shear velocity", 
+        "value": {
+            "type": "float", 
+            "units": "[m/s]"
+        }
+    }, 
+    {
+        "key": "u*s", 
+        "name": "u*s", 
+        "description": "shear velocity due to skin friction", 
+        "value": {
+            "type": "float", 
+            "units": "[m/s]"
+        }
+    }, 
+    {
+        "key": "qb", 
+        "name": "qb", 
+        "description": "bedload transport rate", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }
+]

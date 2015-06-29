@@ -1,0 +1,38 @@
+#===============================================================================
+# STM Config File for: 1DRiverWFRisingBaseLevelNormal
+#===============================================================================
+# Input
+Q                   | {Q}                 | float     | Flood discharge [m^3/s]
+q                   | {q}                 | float     | Upstream bed material sediment feed rate during floods [m^3/s]
+V                   | {V}                 | float     | Units of wash load deposited in the fan per unit bed material load deposited [-]
+I                   | {I}                 | float     | Intermittency [-]
+D                   | {D}                 | float     | Grain size of bed material [mm]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+L                   | {L}                 | float     | Reach length (downchannel distance) [m]
+B                   | {B}                 | float     | Floodplain width [m]
+O                   | {O}                 | float     | Channel sinuosity [-]
+l                   | {l}                 | float     | Bed porosity [-]
+C                   | {C}                 | float     | Chezy resistance coefficient [-]
+S                   | {S}                 | float     | Initial fluvial bed slope [-]
+e                   | {e}                 | float     | Rate of rise of downstream base level (+) [mm/year]
+M                   | {M}                 | float     | Number of intervals [-]
+p                   | {p}                 | float     | Number of prints desired [-]
+i                   | {i}                 | float     | Number of iterations per print [-]
+t                   | {t}                 | float     | Time step [-]
+y                   | {y}                 | float     | Year base level change starts [yr]
+Y                   | {Y}                 | float     | Year base level change stops [yr]
+a                   | {a}                 | float     | Coefficient in the engelund-hansen 1967 load relation [sands, d < 2]
+n                   | {n}                 | float     | Exponent in the engelund-hansen 1967 load relation [sands, d < 2]
+T                   | {T}                 | float     | Channel-forming shields number for sand-bed streams [sands, d < 2]
+P                   | {P}                 | float     | Coefficient in the parker 1979 load relation [gravels, d ≥ 2]
+N                   | {N}                 | float     | Exponent in the parker 1979 load relation [gravels, d ≥ 2]
+c                   | {c}                 | float     | Critical shields number [gravels, d ≥ 2]
+G                   | {G}                 | float     | Channel-forming number for gravel-bed streams [gravels, d ≥ 2]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+eta                 | {eta}               | float     | Bed surface elevation [m]
+Sl                  | {Sl}                | float     | Bed slope [-]
+qbT                 | {qbT}               | float     | Volume bedload transport per unit width [m^2/s]
+Bbf                 | {Bbf}               | float     | Bankfull channel width [m]
+Hbf                 | {Hbf}               | float     | Bankfull water depth [m]

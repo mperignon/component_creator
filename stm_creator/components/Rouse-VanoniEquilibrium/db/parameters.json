@@ -1,0 +1,38 @@
+[
+    {
+        "key": "b", 
+        "name": "b", 
+        "description": "the non-dimensional distance from the bed", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "", 
+        "name": "", 
+        "description": " where c=cb", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "v", 
+        "name": "v", 
+        "description": "vs settling velocity", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u", 
+        "name": "u", 
+        "description": "u* shear velocity", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

@@ -1,0 +1,14 @@
+{
+  "id": "AgDegNormGravMixPW", 
+  "name": "AgDegNormGravMixPW", 
+  "class": "AgDegNormGravMixPW", 
+  "initialize_args": "AgDegNormGravMixPW.cfg", 
+  "time_step": "", 
+  "summary": "The program AgDegNormGravMixPW is an extension of AgDegNormal for sediment mixtures in gravel bed rivers where the channel bed material is transported as bedload only.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:AgDegNormGravMixPW", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

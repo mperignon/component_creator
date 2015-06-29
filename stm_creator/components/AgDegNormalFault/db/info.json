@@ -1,0 +1,14 @@
+{
+  "id": "AgDegNormalFault", 
+  "name": "AgDegNormalFault", 
+  "class": "AgDegNormalFault", 
+  "initialize_args": "AgDegNormalFault.cfg", 
+  "time_step": "", 
+  "summary": "This program computes 1D bed variation in rivers due to differential sediment transport in which it is possible to allow the bed to undergo a sudden vertical fault of a specified amount, at a specified place and time. Faulting is realized by moving all notes downstream of the specified point downward by the amount of the faulting. It uses the same principles of AgDegNormal model but with extension for calculation of the response to a sudden fault along the reach.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:AgDegNormalFault", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

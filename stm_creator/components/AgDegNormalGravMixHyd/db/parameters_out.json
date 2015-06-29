@@ -1,0 +1,137 @@
+[
+    {
+        "key": "x", 
+        "name": "x", 
+        "description": "downstream coordinate", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "SlorS", 
+        "name": "SlorS", 
+        "description": "    ", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "H", 
+        "name": "H", 
+        "description": "water depth", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "tausg", 
+        "name": "tausg", 
+        "description": "shear stress on the bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "eta", 
+        "name": "eta", 
+        "description": "bed surface elevation", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "qbT", 
+        "name": "qbT", 
+        "description": "bedload transport rate", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "qbT/qbo", 
+        "name": "qbT/qbo", 
+        "description": "bedload transport rate relative to the feed rate", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "dsg", 
+        "name": "dsg", 
+        "description": "geometric mean grain on the bed surface", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "dlg", 
+        "name": "dlg", 
+        "description": "geometric mean grain of the bedload", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "d90s", 
+        "name": "d90s", 
+        "description": "grain size such that 90% of the sediment of the bed surface is ", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "qw", 
+        "name": "qw", 
+        "description": "flow discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "qbo", 
+        "name": "qbo", 
+        "description": "feed rate ", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "qbT(qb)", 
+        "name": "qbT(qb)", 
+        "description": "bedload transport rate", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "max", 
+        "name": "max", 
+        "description": "value for max flow", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "end", 
+        "name": "end", 
+        "description": "value for end flow", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

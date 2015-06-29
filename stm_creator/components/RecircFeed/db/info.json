@@ -1,0 +1,14 @@
+{
+  "id": "RecircFeed", 
+  "name": "RecircFeed", 
+  "class": "RecircFeed", 
+  "initialize_args": "RecircFeed.cfg", 
+  "time_step": "", 
+  "summary": "The module "Recirc" implements a calculation for the case of a flume that recirculates water and sediment. This program provides two modules for studying the approach to mobile-bed normal equilibrium in recirculating and sediment-feed flumes containing uniform sediment. The module 'Feed' implements a calculation for the case of flume which receives water and sediment feed. ", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:RecircFeed", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "SteadyStateAg", 
+  "name": "SteadyStateAg", 
+  "class": "SteadyStateAg", 
+  "initialize_args": "SteadyStateAg.cfg", 
+  "time_step": "", 
+  "summary": "This program implements the calculation for steady-state aggradation of a sand-bed river in response to sea level rise at a constant rate.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:SteadyStateAg", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

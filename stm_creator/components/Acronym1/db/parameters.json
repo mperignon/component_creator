@@ -1,0 +1,20 @@
+[
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Sediment Specific Gravity, R+1", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "u", 
+        "name": "u", 
+        "description": "Shear Velocity of Flow", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }
+]

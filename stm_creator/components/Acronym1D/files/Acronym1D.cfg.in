@@ -1,0 +1,22 @@
+#===============================================================================
+# STM Config File for: Acronym1D
+#===============================================================================
+# Input
+R                   | {R}                 | float     | Submerged specific gravity, r+1 [-]
+S                   | {S}                 | float     | Bed slope [-]
+B                   | {B}                 | float     | Channel width [m]
+n                   | {n}                 | float     | Roughness factor [-]
+#===============================================================================
+# Output
+qbT                 | {qbT}               | float     | Volume bedload transport per unit width [m2/s]
+taug*               | {taug*}             | float     | Shields number [-]
+H                   | {H}                 | float     | Water depth [m]
+u*                  | {u*}                | float     | Shear velocity [m/s]
+Qwa                 | {Qwa}               | float     | Mean annual water discharge [m3/s]
+Dg                  | {Dg}                | float     | Geometric mean [mm]
+sigmag              | {sigmag}            | float     | Geometric standard deviation [-]
+Dx                  | {Dx}                | float     | Diameter such that x% of the distribution is finer [mm]
+Qwr                 | {Qwr}               | float     | Mean water discharge for each range [m3/s]
+pQ                  | {pQ}                | float     | Fraction of time in that range [-]
+ustar               | {ustar}             | float     | Shear velocity on the range [m/s]
+taustar             | {taustar}           | float     | Shields number on the range [-]

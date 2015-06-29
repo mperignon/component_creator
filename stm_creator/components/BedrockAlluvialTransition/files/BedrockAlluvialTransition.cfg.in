@@ -1,0 +1,27 @@
+#===============================================================================
+# STM Config File for: BedrockAlluvialTransition
+#===============================================================================
+# Input
+q                   | {q}                 | float     | Water discharge per unit width during floods [-]
+I                   | {I}                 | float     | Intermittency [-]
+Q                   | {Q}                 | float     | Volume sediment feed rate per width at upstream end during floods [-]
+D                   | {D}                 | float     | Grain size of alluvium [-]
+C                   | {C}                 | float     | Chezy resistance coefficient [-]
+b                   | {b}                 | float     | Slope of bedrock basement [-]
+S                   | {S}                 | float     | Initial slope of alluvial region [-]
+R                   | {R}                 | float     | Submerged specific gravity of sediment [-]
+L                   | {L}                 | float     | Bed porosity [-]
+k                   | {k}                 | float     | Coefficient in manning strickler relation (ks = na*d90) [-]
+a                   | {a}                 | float     | Coefficient in manning-strickler relation (alpha,r) [-]
+d                   | {d}                 | float     | Position of the downstream end of the reach [m]
+M                   | {M}                 | float     | Number of spatial steps [-]
+t                   | {t}                 | float     | Time step [-]
+i                   | {i}                 | float     | Number of iterations before printing [-]
+p                   | {p}                 | float     | Number of prints desired [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate (0 = initial bedrock-alluvial transition) [-]
+eta                 | {eta}               | float     | Bed elevation [-]
+Sl                  | {Sl}                | float     | Bed slope [-]
+qb                  | {qb}                | float     | Volume bedload transport per unit width [-]
+H                   | {H}                 | float     | Water depth [-]

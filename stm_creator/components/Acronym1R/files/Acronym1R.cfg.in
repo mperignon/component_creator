@@ -1,0 +1,18 @@
+#===============================================================================
+# STM Config File for: Acronym1R
+#===============================================================================
+# Input
+R                   | {R}                 | float     | Sediment specific gravity, r+1 [-]
+Q                   | {Q}                 | float     | Water discharge [m^3/s]
+S                   | {S}                 | float     | Bed slope [-]
+B                   | {B}                 | float     | Channel width [m]
+n                   | {n}                 | float     | Roughness factor [-]
+#===============================================================================
+# Output
+qbT                 | {qbT}               | float     | Volume beload transport per unit width [m2/s]
+taug*               | {taug*}             | float     | Shields number [-]
+H                   | {H}                 | float     | Water depth [m]
+u*                  | {u*}                | float     | Shear velocity [m/s]
+Dg                  | {Dg}                | float     | Geometric mean [mm]
+sigmag              | {sigmag}            | float     | Geometric standard deviation [-]
+Dx                  | {Dx}                | float     | Diameter such that x% of the distribution is finer [mm]

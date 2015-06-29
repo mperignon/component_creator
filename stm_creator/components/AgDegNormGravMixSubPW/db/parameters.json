@@ -1,0 +1,209 @@
+[
+    {
+        "key": "q", 
+        "name": "q", 
+        "description": "water discharge/width", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "T", 
+        "name": "T", 
+        "description": "gravel input", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "I", 
+        "name": "I", 
+        "description": "intermittency", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "e", 
+        "name": "e", 
+        "description": "base level", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "initial bed slope", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }, 
+    {
+        "key": "L", 
+        "name": "L", 
+        "description": "reach length", 
+        "value": {
+            "type": "float", 
+            "units": "[m2/s]"
+        }
+    }, 
+    {
+        "key": "t", 
+        "name": "t", 
+        "description": "time step", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "M", 
+        "name": "M", 
+        "description": "no. of intervals (100 or less)", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "p", 
+        "name": "p", 
+        "description": "no. of prints", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "i", 
+        "name": "i", 
+        "description": "no. of iterations per print", 
+        "value": {
+            "type": "float", 
+            "units": "[m^2/s]"
+        }
+    }, 
+    {
+        "key": "k", 
+        "name": "k", 
+        "description": "factor by which Ds90 is multiplied for roughness height", 
+        "value": {
+            "type": "float", 
+            "units": "[mm]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "factor by which Ds90 is multiplied for active layer thickness", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "r", 
+        "name": "r", 
+        "description": "coefficient in Manning-Strickler relation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "submerged specific gravity of gravel", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "l", 
+        "name": "l", 
+        "description": "bed porosity, gravel", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "u", 
+        "name": "u", 
+        "description": "upwinding coefficient for load spatial derivatives in Exner equation (>0.5 suggested)", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "a", 
+        "name": "a", 
+        "description": "coefficient for material transferred to substrate as bed aggrades", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "O", 
+        "name": "O", 
+        "description": "channel sinuosity", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "s", 
+        "name": "s", 
+        "description": "subsidence rate [mm/year]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "ratio of depositional width to channel width", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "V", 
+        "name": "V", 
+        "description": "ratio of wash load deposited per unit bed material load deposited", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "C", 
+        "name": "C", 
+        "description": "coefficient, Cf, in the Chezy formulation", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "", 
+        "name": "", 
+        "description": " [exactly 12 different diameters should be entered]", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }
+]

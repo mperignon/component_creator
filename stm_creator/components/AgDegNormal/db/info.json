@@ -1,0 +1,14 @@
+{
+  "id": "AgDegNormal", 
+  "name": "AgDegNormal", 
+  "class": "AgDegNormal", 
+  "initialize_args": "AgDegNormal.cfg", 
+  "time_step": "", 
+  "summary": "The module computes variation in river bed level in a river with constant width. The bed sediment is characterized in terms of a single grain size D and submerged specific gravity R. The reach under consideration has length L. Bed elevation at the downstream end is assumed to be fixed. The model is based on total bed material load. The model is 1D, assumes a rectangular channel and neglects wall effects.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:AgDegNormal", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

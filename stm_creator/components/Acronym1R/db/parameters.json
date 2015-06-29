@@ -1,0 +1,47 @@
+[
+    {
+        "key": "R", 
+        "name": "R", 
+        "description": "Sediment Specific Gravity, R+1", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "Q", 
+        "name": "Q", 
+        "description": "Water Discharge", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "S", 
+        "name": "S", 
+        "description": "Bed Slope", 
+        "value": {
+            "type": "float", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "B", 
+        "name": "B", 
+        "description": "Channel Width", 
+        "value": {
+            "type": "float", 
+            "units": "[m]"
+        }
+    }, 
+    {
+        "key": "n", 
+        "name": "n", 
+        "description": "Roughness Factor", 
+        "value": {
+            "type": "float", 
+            "units": "[N/m2]"
+        }
+    }
+]

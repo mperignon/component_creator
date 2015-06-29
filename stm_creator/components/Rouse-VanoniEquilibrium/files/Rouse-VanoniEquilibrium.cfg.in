@@ -1,0 +1,16 @@
+#===============================================================================
+# STM Config File for: Rouse-VanoniEquilibrium
+#===============================================================================
+# Input
+b                   | {b}                 | float     | The non-dimensional distance from the bed [-]
+v                   | {v}                 | float     | Vs settling velocity [cm/s]
+u                   | {u}                 | float     | U* shear velocity [m/s]
+#===============================================================================
+# Output
+b                   | {b}                 | float     | Height above the bed surface for the initial value [-]
+H                   | {H}                 | float     | Water depth [-]
+z                   | {z}                 | float     | Height above the bed surface of various points [-]
+u*                  | {u*}                | float     | Shear velocity [m/s]
+vs                  | {vs}                | float     | Settling velocity of sediment [cm/s]
+cb                  | {cb}                | float     | Concentration of sediment at b point [-]
+c                   | {c}                 | float     | Concentration of sediment at generic point [-]

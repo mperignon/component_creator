@@ -1,0 +1,14 @@
+{
+  "id": "Acronym1D", 
+  "name": "Acronym1D", 
+  "class": "Acronym1D", 
+  "initialize_args": "Acronym1D.cfg", 
+  "time_step": "", 
+  "summary": "This program acts the same way as the Acronym1 do, with the addition of a “flow duration curve;” the program calculates the same values (though taken as a mean annual) as well as the mean annual water discharge, and the characteristics of the flow duration curve.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:Acronym1D", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}

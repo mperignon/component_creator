@@ -1,0 +1,20 @@
+#===============================================================================
+# STM Config File for: BackwaterWrightParker
+#===============================================================================
+# Input
+Q                   | {Q}                 | float     | Flow discharge [m^3/s]
+B                   | {B}                 | float     | Channel width [m]
+d                   | {d}                 | float     | Median grain size (d50) [mm]
+D                   | {D}                 | float     | Grain size such that 90% passes (d90) [mm]
+R                   | {R}                 | float     | Submerges specific gravity of sediment [-]
+S                   | {S}                 | float     | Bed slope [-]
+k                   | {k}                 | float     | Downstream water surface elevation [m]
+L                   | {L}                 | float     | Reach length [m]
+M                   | {M}                 | float     | Number of spatial nodes (max of 99) [-]
+#===============================================================================
+# Output
+x                   | {x}                 | float     | Downstream coordinate [m]
+H                   | {H}                 | float     | Water depth [m]
+Hs                  | {Hs}                | float     | Water depth due to skin friction [m]
+eta                 | {eta}               | float     | Bed surface elevation [m]
+ksi                 | {ksi}               | float     | Water surface elevation [m]

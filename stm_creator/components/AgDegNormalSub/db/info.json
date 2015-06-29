@@ -1,0 +1,14 @@
+{
+  "id": "AgDegNormalSub", 
+  "name": "AgDegNormalSub", 
+  "class": "AgDegNormalSub", 
+  "initialize_args": "AgDegNormalSub.cfg", 
+  "time_step": "", 
+  "summary": "The program computes the approach to mobile-bed equilibrium in a river carrying uniform material and flowing into a subsiding basin. It is a descendant of AgDegNormal.", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:AgDegNormalSub", 
+  "author": "Gary Parker ", 
+  "email": "parkerg@uiuc.edu", 
+  "version": "0.1", 
+  "doi": "10.1594/IEDA/100078", 
+  "license": "Apache"
+}
