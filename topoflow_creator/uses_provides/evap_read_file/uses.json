@@ -1,0 +1,9 @@
+[
+  {
+    "id": "channels", 
+    "required": false, 
+    "exchange_items": [
+      "channel_water_x-section__mean_depth"
+    ]
+  }
+]

@@ -1,6 +1,0 @@
-[
-  "land_surface_water__evaporation_volume_flux", 
-  "land_surface_water__domain_time_integral_of_evaporation_volume_flux", 
-  "model_grid_cell__area", 
-  "model__time_step"
-]

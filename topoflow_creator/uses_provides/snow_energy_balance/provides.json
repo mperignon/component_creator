@@ -1,0 +1,51 @@
+[
+  {
+    "id": "", 
+    "required": false, 
+    "exchange_items": [
+      "model__time_step", 
+      "snowpack__energy-per-area_cold_content", 
+      "snowpack__initial_depth", 
+      "snowpack__initial_liquid-equivalent_depth", 
+      "snowpack__z_mean_of_mass-specific_isobaric_heat_capacity"
+    ]
+  }, 
+  {
+    "id": "topoflow", 
+    "required": false, 
+    "exchange_items": [
+      "snowpack__domain_time_integral_of_melt_volume_flux"
+    ]
+  }, 
+  {
+    "id": "evap", 
+    "required": false, 
+    "exchange_items": [
+      "snowpack__depth"
+    ]
+  }, 
+  {
+    "id": "infil", 
+    "required": false, 
+    "exchange_items": [
+      "snowpack__melt_volume_flux"
+    ]
+  }, 
+  {
+    "id": "channels", 
+    "required": false, 
+    "exchange_items": [
+      "snowpack__melt_volume_flux"
+    ]
+  }, 
+  {
+    "id": "met", 
+    "required": false, 
+    "exchange_items": [
+      "snowpack__depth", 
+      "snowpack__liquid-equivalent_depth", 
+      "snowpack__melt_volume_flux", 
+      "snowpack__z_mean_of_mass-per-volume_density"
+    ]
+  }
+]

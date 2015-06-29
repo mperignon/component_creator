@@ -1,0 +1,38 @@
+[
+  {
+    "id": "", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_soil__conduction_heat_flux", 
+      "model__time_step"
+    ]
+  }, 
+  {
+    "id": "channels", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_water__evaporation_volume_flux"
+    ]
+  }, 
+  {
+    "id": "topoflow", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_water__domain_time_integral_of_evaporation_volume_flux"
+    ]
+  }, 
+  {
+    "id": "satzone", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_water__evaporation_volume_flux"
+    ]
+  }, 
+  {
+    "id": "infil", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_water__evaporation_volume_flux"
+    ]
+  }
+]

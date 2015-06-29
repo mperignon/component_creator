@@ -1,0 +1,39 @@
+[
+  {
+    "id": "channels", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_water__baseflow_volume_flux"
+    ]
+  }, 
+  {
+    "id": "", 
+    "required": false, 
+    "exchange_items": [
+      "model__time_step", 
+      "model_soil_layer-0__porosity"
+    ]
+  }, 
+  {
+    "id": "topoflow", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_water__baseflow_volume_flux", 
+      "land_surface_water__domain_time_integral_of_baseflow_volume_flux"
+    ]
+  }, 
+  {
+    "id": "d8", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface__elevation"
+    ]
+  }, 
+  {
+    "id": "infil", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface__elevation"
+    ]
+  }
+]

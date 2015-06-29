@@ -1,0 +1,51 @@
+[
+  {
+    "id": "", 
+    "required": false, 
+    "exchange_items": [
+      "soil_water_sat-zone_top_surface__elevation"
+    ]
+  }, 
+  {
+    "id": "satzone", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface__elevation"
+    ]
+  }, 
+  {
+    "id": "erode", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface__elevation"
+    ]
+  }, 
+  {
+    "id": "evap", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface_water__evaporation_volume_flux"
+    ]
+  }, 
+  {
+    "id": "snow", 
+    "required": false, 
+    "exchange_items": [
+      "snowpack__melt_volume_flux"
+    ]
+  }, 
+  {
+    "id": "ice", 
+    "required": false, 
+    "exchange_items": [
+      "glacier_ice__melt_volume_flux"
+    ]
+  }, 
+  {
+    "id": "met", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_water__rainfall_volume_flux"
+    ]
+  }
+]

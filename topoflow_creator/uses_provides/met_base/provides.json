@@ -1,0 +1,89 @@
+[
+  {
+    "id": "", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_aerosol_dust__reduction_of_transmittance", 
+      "atmosphere_air-column_water-vapor__liquid-equivalent_depth", 
+      "atmosphere_bottom_air__brutsaert_emissivity_canopy_factor", 
+      "atmosphere_bottom_air__brutsaert_emissivity_cloud_factor", 
+      "atmosphere_bottom_air__bulk_latent_heat_aerodynamic_conductance", 
+      "atmosphere_bottom_air__bulk_sensible_heat_aerodynamic_conductance", 
+      "atmosphere_bottom_air__emissivity", 
+      "atmosphere_bottom_air__neutral_bulk_aerodynamic_conductance", 
+      "atmosphere_bottom_air__pressure", 
+      "atmosphere_bottom_air_flow__bulk_richardson_number", 
+      "atmosphere_bottom_air_flow__log_law_roughness_length", 
+      "atmosphere_bottom_air_flow__reference-height_speed", 
+      "atmosphere_bottom_air_flow__speed_reference_height", 
+      "atmosphere_bottom_air_land_net-sensible-heat__energy_flux", 
+      "atmosphere_bottom_air_water-vapor__dew_point_temperature", 
+      "atmosphere_bottom_air_water-vapor__partial_pressure", 
+      "atmosphere_bottom_air_water-vapor__relative_saturation", 
+      "atmosphere_bottom_air_water-vapor__saturated_partial_pressure", 
+      "atmosphere_water__precipitation_leq-volume_flux", 
+      "earth__standard_gravity_constant", 
+      "land_surface__albedo", 
+      "land_surface__aspect_angle", 
+      "land_surface__emissivity", 
+      "land_surface__latitude", 
+      "land_surface__longitude", 
+      "land_surface__slope_angle", 
+      "land_surface_air_water-vapor__partial_pressure", 
+      "land_surface_air_water-vapor__saturated_partial_pressure", 
+      "model__time_step", 
+      "physics__stefan_boltzmann_constant", 
+      "physics__von_karman_constant", 
+      "water__mass-specific_latent_fusion_heat", 
+      "water__mass-specific_latent_vaporization_heat"
+    ]
+  }, 
+  {
+    "id": "topoflow", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_water__domain_time_integral_of_precipitation_leq-volume_flux", 
+      "atmosphere_water__domain_time_max_of_precipitation_leq-volume_flux"
+    ]
+  }, 
+  {
+    "id": "evap", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_bottom_air__temperature", 
+      "atmosphere_bottom_air_land_net-latent-heat__energy_flux", 
+      "land_surface__temperature", 
+      "land_surface_net-longwave-radiation__energy_flux", 
+      "land_surface_net-shortwave-radiation__energy_flux", 
+      "land_surface_net-total-energy__energy_flux"
+    ]
+  }, 
+  {
+    "id": "snow", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_bottom_air__mass-per-volume_density", 
+      "atmosphere_bottom_air__mass-specific_isobaric_heat_capacity", 
+      "atmosphere_bottom_air__temperature", 
+      "atmosphere_water__snowfall_leq-volume_flux", 
+      "land_surface__temperature", 
+      "land_surface_net-total-energy__energy_flux", 
+      "water-liquid__mass-per-volume_density"
+    ]
+  }, 
+  {
+    "id": "infil", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_water__rainfall_volume_flux"
+    ]
+  }, 
+  {
+    "id": "channels", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_water__rainfall_volume_flux", 
+      "water-liquid__mass-per-volume_density"
+    ]
+  }
+]

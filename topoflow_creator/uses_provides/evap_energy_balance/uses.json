@@ -1,0 +1,19 @@
+[
+  {
+    "id": "met", 
+    "required": false, 
+    "exchange_items": [
+      "atmosphere_bottom_air__temperature", 
+      "atmosphere_bottom_air_land_net-latent-heat__energy_flux", 
+      "land_surface_net-total-energy__energy_flux", 
+      "land_surface__temperature"
+    ]
+  }, 
+  {
+    "id": "snow", 
+    "required": false, 
+    "exchange_items": [
+      "snowpack__depth"
+    ]
+  }
+]

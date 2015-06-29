@@ -1,0 +1,16 @@
+[
+  {
+    "id": "", 
+    "required": false, 
+    "exchange_items": [
+      "channel_model__time_step"
+    ]
+  }, 
+  {
+    "id": "channels", 
+    "required": false, 
+    "exchange_items": [
+      "channel_water__volume"
+    ]
+  }
+]
